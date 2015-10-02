@@ -20,3 +20,5 @@ RethinkDB is a scalable documented oriented database which came out of a need to
 ### Team Members
 - Prakhar Srivastav (ps2894)
 - Ayush Jain (aj2672)
+
+[PPT](https://docs.google.com/presentation/d/1K19MUX96BfwQVA9RYon5WFyZgQT-FsIS2t436csjRN4/pub?start=false&loop=false&delayms=3000)
