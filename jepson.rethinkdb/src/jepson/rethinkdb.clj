@@ -28,14 +28,13 @@
     ;; installation instructions copied from https://github.com/prakhar1989/ADS/blob/master/Dockerfile
     (setup! [_ test node] 
       (info node "set up")
-      (if (= node :n1)
         (do 
           (debian/add-repo! "rethinkdb" apt-line "pgp.mit.edu" packagekey)
           (debian/update!)
-          (debian/install {:rethinkdb version}))))
+          (debian/install {:rethinkdb version})))
 
     (teardown! [_ test node]
-      (info node "tore down"))))
+      (debian/uninstall! "rethinkdb"))))
 
 (defn basic-test [version]
   (merge tests/noop-test

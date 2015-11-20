@@ -1,1 +1,1 @@
-sudo docker run --privileged -itv /home/ubuntu:/myvolume tjake/jepsen
+sudo docker run --privileged -idtv /home/ubuntu/ADS:/myvolume tjake/jepsen
