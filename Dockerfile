@@ -10,8 +10,8 @@ RUN echo "deb http://download.rethinkdb.com/apt jessie main" > /etc/apt/sources.
 ENV RETHINKDB_PACKAGE_VERSION 2.2.0~0jessie
 
 RUN apt-get update \
-    && apt-get install -y rethinkdb=$RETHINKDB_PACKAGE_VERSION \
-    && rm -rf /var/lib/apt/lists/*
+	&& apt-get install -y rethinkdb=$RETHINKDB_PACKAGE_VERSION \
+	&& rm -rf /var/lib/apt/lists/*
 
 VOLUME ["/data"]
 
@@ -21,4 +21,3 @@ WORKDIR /data
 
 #   process cluster webui
 EXPOSE 28015 29015 8080
-
