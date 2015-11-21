@@ -18,35 +18,41 @@
             [jepsen.control.net :as cn]
             [jepsen.os.debian :as debian]))
 
-;; constants
-(def packagekey "1614552E5765227AEC39EFCFA7E00EF33A8F2399")
-(def apt-line "deb http://download.rethinkdb.com/apt jessie main")
-
-(defn start! [node]
+(defn start! 
+  "starts the db on each node"
+  [node]
   (info node "starting rethinkdb")
   (c/su (c/exec :service :rethinkdb :restart))
   (info node "rethinkdb ready"))
 
-(defn download-config! [node]
-  (info node "downloading config")
-  (let [url "https://raw.githubusercontent.com/prakhar1989/ADS/master/rethinkdb.conf"
-        dest "/etc/rethinkdb/instances.d/instance1.conf"]
-    (c/su (c/exec :wget url :-O dest))))
-  
+(defn configure! 
+  "configure instance with the config file"
+  [node]
+  (c/su (c/exec :echo (slurp (io/resource "rethinkdb.conf")
+                :> "/etc/rethinkdb/instances.d/instance1.conf"))))
+
+(defn install! 
+  "installs rethinkdb on each node"
+  [version]
+  (let [packagekey "1614552E5765227AEC39EFCFA7E00EF33A8F2399"
+        apt-line "deb http://download.rethinkdb.com/apt jessie main"]
+    (debian/add-repo! "rethinkdb" apt-line "pgp.mit.edu" packagekey)
+    (debian/update!)
+    (debian/install {:rethinkdb version})))
+
+;; the jepsen core function
 (defn db [version]
   (reify db/DB
     (setup! [_ test node] 
       (info node "set up")
-        (do 
-          (debian/add-repo! "rethinkdb" apt-line "pgp.mit.edu" packagekey)
-          (debian/update!)
-          (debian/install {:rethinkdb version})
-          (download-config! node)
-          (start! node)))
+        (do
+          (install! version)
+          (configure! node))
+          (start! node))
 
     (teardown! [_ test node]
-      ;(info node "tearing down"))))
-      (debian/uninstall! "rethinkdb"))))
+      ;; dont do anything for now
+      (info node "tearing down"))))
 
 (defn basic-test [version]
   (merge tests/noop-test
