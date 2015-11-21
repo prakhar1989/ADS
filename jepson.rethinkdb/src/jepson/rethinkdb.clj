@@ -22,18 +22,30 @@
 (def packagekey "1614552E5765227AEC39EFCFA7E00EF33A8F2399")
 (def apt-line "deb http://download.rethinkdb.com/apt jessie main")
 
-;; codeeeez
+(defn start! [node]
+  (info node "starting rethinkdb")
+  (c/su (c/exec :service :rethinkdb :restart))
+  (info node "rethinkdb ready"))
+
+(defn download-config! [node]
+  (info node "downloading config")
+  (let [url "https://raw.githubusercontent.com/prakhar1989/ADS/master/rethinkdb.conf"
+        dest "/etc/rethinkdb/instances.d/instance1.conf"]
+    (c/su (c/exec :wget url :-O dest))))
+  
 (defn db [version]
   (reify db/DB
-    ;; installation instructions copied from https://github.com/prakhar1989/ADS/blob/master/Dockerfile
     (setup! [_ test node] 
       (info node "set up")
         (do 
           (debian/add-repo! "rethinkdb" apt-line "pgp.mit.edu" packagekey)
           (debian/update!)
-          (debian/install {:rethinkdb version})))
+          (debian/install {:rethinkdb version})
+          (download-config! node)
+          (start! node)))
 
     (teardown! [_ test node]
+      ;(info node "tearing down"))))
       (debian/uninstall! "rethinkdb"))))
 
 (defn basic-test [version]
