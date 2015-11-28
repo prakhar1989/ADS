@@ -25,11 +25,20 @@
   (c/su (c/exec :service :rethinkdb :restart))
   (info node "rethinkdb ready"))
 
+(defn join-servers 
+  "returns a list of config lines for cluster setup"
+  [test]
+  (->> (:nodes test)
+       (map #(str "join=" (name %) ":29015"))
+       (clojure.string/join "\n")))
+
 (defn configure! 
   "configure instance with the config file"
-  [node]
-  (c/su (c/exec :echo (slurp (io/resource "rethinkdb.conf")
-                :> "/etc/rethinkdb/instances.d/instance1.conf"))))
+  [node test]
+    (c/su (c/exec :echo (-> (slurp (io/resource "rethinkdb.conf"))
+                            (str "\n\n" (join-servers test))
+                            (str "\n\n" "server-name=" (name node)))
+                    :> "/etc/rethinkdb/instances.d/instance1.conf")))
 
 (defn install! 
   "installs rethinkdb on each node"
@@ -47,12 +56,12 @@
       (info node "set up")
         (do
           (install! version)
-          (configure! node))
-          (start! node))
-
+          (configure! node test)
+          (start! node)))
     (teardown! [_ test node]
-      ;; dont do anything for now
+      ;; TODO: See how to kill
       (info node "tearing down"))))
+
 
 (defn basic-test [version]
   (merge tests/noop-test
