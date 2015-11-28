@@ -3,27 +3,33 @@
             [clojure.core.reducers :as r]
             [clojure.java.io :as io]
             [clojure.string :as str]
+            [rethinkdb.query :as rethink]
             [clojure.pprint :refer [pprint]]
             [knossos.op :as op]
             [jepsen [client :as client]
-                                 [core :as jepsen]
-                                 [db :as db]
-                                 [tests :as tests]
-                                 [control :as c :refer [|]]
-                                 [checker :as checker]
-                                 [nemesis :as nemesis]
-                                 [generator :as gen]
-                                 [util :refer [timeout meh]]]
+                    [core :as jepsen]
+                    [db :as db]
+                    [tests :as tests]
+                    [control :as c :refer [|]]
+                    [checker :as checker]
+                    [nemesis :as nemesis]
+                    [generator :as gen]
+                    [util :refer [timeout meh]]]
             [jepsen.control.util :as cu]
             [jepsen.control.net :as cn]
             [jepsen.os.debian :as debian]))
 
-(defn start! 
-  "starts the db on each node"
-  [node]
-  (info node "starting rethinkdb")
-  (c/su (c/exec :service :rethinkdb :restart))
-  (info node "rethinkdb ready"))
+
+(defmacro retry
+    "Evals body repeatedly until it doesn't throw, sleeping dt seconds."
+    [dt & body]
+    `(loop []
+            (let [res# (try ~@body
+                         (catch Throwable e# ::failed))]
+              (if (= res# ::failed)
+                (do (Thread/sleep (* ~dt 1000))
+                    (recur))
+                res#))))
 
 (defn join-servers 
   "returns a list of config lines for cluster setup"
@@ -49,6 +55,21 @@
     (debian/update!)
     (debian/install {:rethinkdb version})))
 
+(defn start! 
+  "starts the db on each node"
+  [node]
+  (info node "starting rethinkdb")
+  (c/su (c/exec :service :rethinkdb :restart))
+  (info node "rethinkdb ready"))
+
+(defn show-dbinfo
+  "logs db information for each node"
+  [node]
+  (if (= node :n1)
+    (let [conn (rethink/connect :host (name node) :port 28015)]
+        (retry 5 (rethink/close conn))
+        (info node "ready"))))
+
 ;; the jepsen core function
 (defn db [version]
   (reify db/DB
@@ -57,7 +78,8 @@
         (do
           (install! version)
           (configure! node test)
-          (start! node)))
+          (start! node)
+          (show-dbinfo node)))
     (teardown! [_ test node]
       ;; TODO: See how to kill
       (info node "tearing down"))))
