@@ -4,7 +4,8 @@
             [clojure.java.io :as io]
             [clojure.string :as str]
             [rethinkdb.query :as rethink]
-            [clojure.pprint :refer [pprint]]
+            [rethinkdb.core :refer [connect close]]
+	    [clojure.pprint :refer [pprint]]
             [knossos.op :as op]
             [jepsen [client :as client]
                     [core :as jepsen]
@@ -65,10 +66,8 @@
 (defn show-dbinfo
   "logs db information for each node"
   [node]
-  (if (= node :n1)
-    (let [conn (rethink/connect :host (name node) :port 28015)]
-        (retry 5 (rethink/close conn))
-        (info node "ready"))))
+  (retry 5 (close (connect :host (name node) :port 28015)))
+  (info node "ready"))
 
 ;; the jepsen core function
 (defn db [version]
@@ -79,7 +78,8 @@
           (install! version)
           (configure! node test)
           (start! node)
-          (show-dbinfo node)))
+          (show-dbinfo node)
+	))
     (teardown! [_ test node]
       ;; TODO: See how to kill
       (info node "tearing down"))))
