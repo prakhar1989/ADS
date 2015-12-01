@@ -1,36 +1,32 @@
 (ns jepson.rethinkdb
   (:require [clojure.tools.logging :refer :all]
-            [clojure.core.reducers :as r]
             [clojure.java.io :as io]
-            [clojure.string :as str]
-            [rethinkdb.query :as rethink]
             [rethinkdb.core :refer [connect close]]
-	    [clojure.pprint :refer [pprint]]
-            [knossos.op :as op]
-            [jepsen [client :as client]
-                    [core :as jepsen]
-                    [db :as db]
+	          [clojure.pprint :refer [pprint]]
+            [jepsen [db :as db]
                     [tests :as tests]
                     [control :as c :refer [|]]
-                    [checker :as checker]
-                    [nemesis :as nemesis]
-                    [generator :as gen]
                     [util :refer [timeout meh]]]
-            [jepsen.control.util :as cu]
-            [jepsen.control.net :as cn]
             [jepsen.os.debian :as debian]))
 
 
-(defmacro retry
-    "Evals body repeatedly until it doesn't throw, sleeping dt seconds."
-    [dt & body]
-    `(loop []
-            (let [res# (try ~@body
-                         (catch Throwable e# ::failed))]
-              (if (= res# ::failed)
-                (do (Thread/sleep (* ~dt 1000))
-                    (recur))
-                res#))))
+(defn connection
+  "Make a connection to rethinkdb node"
+  [node]
+  (connect :host (name node) :port 28015))
+
+(defn retry
+  "Evals body repeatedly until it doesn't throw, sleeping dt seconds."
+  [dt node]
+  (loop []
+     (let [done? (atom false)]
+       (try (close (connection node))
+            (compare-and-set! done? false true)
+            (catch Throwable _
+              (info "Node not up yet. Will try again")))
+       (if (= done? false)
+         (do (Thread/sleep (* ~dt 1000))
+             (recur))))))
 
 (defn join-servers 
   "returns a list of config lines for cluster setup"
@@ -66,7 +62,7 @@
 (defn show-dbinfo
   "logs db information for each node"
   [node]
-  (retry 5 (close (connect :host (name node) :port 28015)))
+  (retry 5 node)
   (info node "ready"))
 
 ;; the jepsen core function
