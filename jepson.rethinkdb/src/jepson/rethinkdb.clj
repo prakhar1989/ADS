@@ -10,6 +10,7 @@
             [jepsen.os.debian :as debian]))
 
 
+
 (defn connection
   "Make a connection to rethinkdb node"
   [node]
@@ -19,13 +20,14 @@
   "Evals body repeatedly until it doesn't throw, sleeping dt seconds."
   [dt node]
   (loop []
+    ; using atom because recur cannot be used across try false. Other solution is macro!!!!
      (let [done? (atom false)]
        (try (close (connection node))
             (compare-and-set! done? false true)
             (catch Throwable _
               (info "Node not up yet. Will try again")))
        (if (= done? false)
-         (do (Thread/sleep (* ~dt 1000))
+         (do (Thread/sleep (* dt 1000))
              (recur))))))
 
 (defn join-servers 

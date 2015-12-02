@@ -9,17 +9,18 @@
             [jepsen.checker :as checker]
             [jepsen.nemesis :as nemesis]
             [jepsen.client :as client]
+            [jepsen.generator :as gen]
             [rethinkdb  [core :refer [connect close]]
                         [query :as query]
                         [query-builder :refer [term]]]))
 
 (defn set-write-acks!
   "Updates the write-acks mode for a cluster. Spins until successful."
-  [conn test db write-mode]
+  [conn test write-mode]
   (rethinkdb/retry 5
-         (run!
+         (query/run
            (query/update
-             (query/table (query/db db) "table_config")
+             (query/table (query/db "rethinkdb") "table_config")
              {:write_acks write-mode
               :shards [{:primary_replica (core/primary test)
                         :replicas (map name (:nodes test))}]})
@@ -29,7 +30,7 @@
   "Wait for all replicas for a table to be ready"
   [conn db tbl]
   ;TODO:: Not sure what term is for. Documentation doesn't say anything
-  (run! (term :WAIT [(query/table (query/db db) tbl)] {}) conn))
+  (query/run (term :WAIT [(query/table (query/db db) tbl)] {}) conn))
 
 (defrecord Client [tbl-created? db table write-mode read-mode]
   client/Client
@@ -40,11 +41,11 @@
       (locking tbl-created?
         (when (compare-and-set! tbl-created? false true)
           (info node "Creating table.")
-          (run! (query/db-create db) conn)
+          (query/run (query/db-create db) conn)
           (info node "Created db.")
-          (run! (query/table-create (query/db db) table {:replicas 5}) conn)
+          (query/run (query/table-create (query/db db) table {:replicas 5}) conn)
           (info node "Created table.")
-          (set-write-acks! conn test db write-mode)
+          (set-write-acks! conn test write-mode)
           (info node "Write acks set.")
           (wait-table conn db table)
           (info node "Client setup complete")))
@@ -57,33 +58,31 @@
                              (query/table table)
                              (query/get ("test"))
                              (query/get-field "value")
-                             (run! (:conn this)))
+                             (query/run (:conn this)))]
                   (assoc op
                     :value result
-                    :type :ok)])
+                    :type :ok))
 
       :write ((-> (query/db db)
                   (query/table table)
                   (query/insert {:id "test" :value (:value op)}
                                 {"conflict" "update"})
-                  (run! (:conn this)))
+                  (query/run (:conn this)))
                (assoc op :type :ok))
 
       :cas (let [row (-> (query/db db)
                           (query/table table)
                           (query/get ("test")))]
                 (-> (query/update row (query/fn [row]
-                                        (if (query/eq (query/get-field row :value) (head (:value op)))
+                                        (if (query/eq (query/get-field row :value) (first (:value op)))
                                             {:value (last (:value op))})))
-                    (run! (:conn this)))
-
+                    (query/run (:conn this)))
              (assoc op :type :ok))))
 
-
   (teardown! [this test]
-    ;TODO::uncomment next line to drop db and table. Commented right now for debugging.
-    ;(run! (query/db-drop db) (:conn this))
-    (close (:conn this))))
+    (query/run (query/db-drop db) (:conn this))
+    (close (:conn this))
+    (info "Tearing down client")))
 
 (defn create-client
   "Client which executes the tests"
@@ -95,11 +94,20 @@
 (defn r   [_ _] {:type :invoke, :f :read})
 (defn cas [_ _] {:type :invoke, :f :cas, :value [(rand-int 5) (rand-int 5)]})
 
-(defn generator
-  "A generator that provides operations to the executer"
-  []
-  (info "Doing nothing yet. Trolling generator."))
+(defn std-gen
+  "Takes a client generator and wraps it in a typical schedule and nemesis
+  causing failover."
+  [gen]
+  (gen/phases
+    (->> gen
+         (gen/delay 1)
+         (gen/nemesis
+           (gen/seq (cycle [(gen/sleep 60)
+                            {:type :info :f :stop}
+                            {:type :info :f :start}])))
+         (gen/time-limit 600))))
 
+;The skeleton is fixed used by aphyr at various places. Only the client is to be implemented for our use case.
 (defn cas-test [version write-mode read-mode]
   "Test to perform"
   (merge tests/noop-test
@@ -111,6 +119,5 @@
           :checker    (checker/compose {:linear checker/linearizable
                                         :latency (checker/latency-graph)})
           :nemesis    (nemesis/partition-random-halves)
-          :generator  (generator)
-          }))
+          :generator  (std-gen (gen/mix [r r r]))}))
 

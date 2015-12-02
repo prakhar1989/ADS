@@ -6,13 +6,12 @@
 
 (def version "2.2.0~0jessie")
 
-(deftest basic-test
-  (is (:valid?
-        (:results
-          (run! (rethinkdb/basic-test version))))))
+;(deftest basic-test
+;  (is (:valid?
+;        (:results
+;          (run! (rethinkdb/basic-test version))))))
 
-;(comment
-;  (deftest better-test
-;    (is (:valid?
-;          (:results
-;            (run! (cas/cas-test version "single" "single")))))))
+(deftest better-test
+    (is (:valid?
+          (:results
+            (run! (cas/cas-test version "single" "single"))))))
