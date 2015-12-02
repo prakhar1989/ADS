@@ -82,7 +82,8 @@
   (teardown! [this test]
     ;TODO::uncomment next line to drop db and table. Commented right now for debugging.
     ;(run! (query/db-drop db) (:conn this))
-    (close (:conn this))))
+    (close (:conn this))
+    ))
 
 (defn create-client
   "Client which executes the tests"
@@ -113,5 +114,4 @@
           :nemesis    (nemesis/partition-random-halves)
           :generator  (generator)
           }))
-
 
