@@ -15,7 +15,7 @@
   [node]
   (connect :host (name node) :port 28015))
 
-(defn retry
+(defn retry1
   "Evals body repeatedly until it doesn't throw, sleeping dt seconds."
   [dt node]
   (loop []
@@ -28,7 +28,20 @@
          (do (Thread/sleep (* ~dt 1000))
              (recur))))))
 
-(defn join-servers 
+(defn retry
+  "Evals body repeatedly until it doesn't throw, sleeping dt seconds."
+  [dt node]
+  (loop [done? false]
+      (if done?
+        (info "Node up and working. Return")
+        (try (close (connection node))
+             (recur true)
+           (catch Throwable _
+              (info "Node not up yet. Will try again")
+              (Thread/sleep (* dt 1000))
+              (recur false))))))
+
+(defn join-servers
   "returns a list of config lines for cluster setup"
   [test]
   (->> (:nodes test)
