@@ -11,9 +11,8 @@
         (:results
           (run! (rethinkdb/basic-test version))))))
 
-(comment
-  (deftest better-test
-    (is (:valid?
-          (:results
-            (run! (cas/cas-test version "single" "single"))))))
-  )
+;(comment
+;  (deftest better-test
+;    (is (:valid?
+;          (:results
+;            (run! (cas/cas-test version "single" "single")))))))

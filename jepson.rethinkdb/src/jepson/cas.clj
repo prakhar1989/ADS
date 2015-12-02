@@ -69,27 +69,26 @@
                   (run! (:conn this)))
                (assoc op :type :ok))
 
-      :cas ((let [row (-> (query/db db)
+      :cas (let [row (-> (query/db db)
                           (query/table table)
                           (query/get ("test")))]
-                (->(query/update row (query/fn [row]
-                                               {:value (-> (query/get-field row :value)
-                                                           (query/eq (get (:value op) 0)))
-                                                (get (:value op) 1)}))
-                   (run! (:conn this))))
+                (-> (query/update row (query/fn [row]
+                                        (if (query/eq (query/get-field row :value) (head (:value op)))
+                                            {:value (last (:value op))})))
+                    (run! (:conn this)))
+
              (assoc op :type :ok))))
+
 
   (teardown! [this test]
     ;TODO::uncomment next line to drop db and table. Commented right now for debugging.
     ;(run! (query/db-drop db) (:conn this))
-    (close (:conn this))
-    ))
+    (close (:conn this))))
 
 (defn create-client
   "Client which executes the tests"
   [write-mode read-mode]
-  (Client. (atom false) "ads" "cas" write-mode read-mode)
-  )
+  (Client. (atom false) "ads" "cas" write-mode read-mode))
 
 ; Generators
 (defn w   [_ _] {:type :invoke, :f :write, :value (rand-int 5)})

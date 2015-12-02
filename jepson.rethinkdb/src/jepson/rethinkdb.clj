@@ -74,8 +74,8 @@
           (install! version)
           (configure! node test)
           (start! node)
-          (show-dbinfo node)
-	))
+          (show-dbinfo node)))
+
     (teardown! [_ test node]
       ;; TODO: See how to kill
       (info node "tearing down"))))
