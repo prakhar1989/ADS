@@ -59,13 +59,13 @@
   [node]
   (info node "starting rethinkdb")
   (c/su (c/exec :service :rethinkdb :restart))
-  (info node "rethinkdb ready"))
+  (info node "rethinkdb up"))
 
 (defn show-dbinfo
   "logs db information for each node"
   [node]
   (retry 5 node)
-  (info node "ready"))
+  (info node "rethinkdb ready"))
 
 ;; the jepsen core function
 (defn db [version]

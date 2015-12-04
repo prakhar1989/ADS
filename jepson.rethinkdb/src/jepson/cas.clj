@@ -40,7 +40,6 @@
       ; Everyone's gotta block until we've made the table.
       (locking tbl-created?
         (when (compare-and-set! tbl-created? false true)
-          (info node "Creating table.")
           (query/run (query/db-create db) conn)
           (info node "Created db.")
           (query/run (query/table-create (query/db db) table {:replicas 5}) conn)
@@ -59,6 +58,7 @@
                              (query/get ("test"))
                              (query/get-field "value")
                              (query/run (:conn this)))]
+              (info result)
                   (assoc op
                     :value result
                     :type :ok))
@@ -105,7 +105,7 @@
            (gen/seq (cycle [(gen/sleep 60)
                             {:type :info :f :stop}
                             {:type :info :f :start}])))
-         (gen/time-limit 600))))
+         (gen/time-limit 6))))
 
 ;The skeleton is fixed used by aphyr at various places. Only the client is to be implemented for our use case.
 (defn cas-test [version write-mode read-mode]
@@ -119,5 +119,5 @@
           :checker    (checker/compose {:linear checker/linearizable
                                         :latency (checker/latency-graph)})
           :nemesis    (nemesis/partition-random-halves)
-          :generator  (std-gen (gen/mix [r r r]))}))
+          :generator  (std-gen (gen/mix [r w r]))}))
 
