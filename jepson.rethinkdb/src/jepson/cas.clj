@@ -26,6 +26,18 @@
                         :replicas (map name (:nodes test))}]})
            conn)))
 
+; wraps a operation's error in either a :fail or :info state
+; depending on whether the operation 
+(defmacro with-errors
+  [op idempotent-ops & body]
+  `(let [error-type# (if (~idempotent-ops (:f ~op)) :fail :info)]
+     (try
+       ~@body
+       (catch clojure.lang.ExceptionInfo e#
+         (case (:e (ex-data e#))
+           4100000 (assoc ~op :type :fail,       :error (:cause (ex-data e#)))
+                   (assoc ~op :type error-type#, :error (str e#)))))))
+
 (defn wait-table
   "Wait for all replicas for a table to be ready"
   [conn db tbl]
@@ -52,31 +64,34 @@
 
   ;TODO::Figure out id at all places. Cant undestand what aphyr has done.
   (invoke! [this test op]
-    (case (:f op)
-      :read (let [result (-> (query/db db)
-                             (query/table table)
-                             (query/get "test")
-                             (query/get-field "value")
-                             (query/run (:conn this)))]
-                  (assoc op
-                    :value {:test result}
-                    :type :ok))
+    ; Reads are idempotent, we can treat their failure as info
+    (with-errors op #{:read}
+      (case (:f op)
+            :read (let [result (-> (query/db db)
+                                   (query/table table)
+                                   (query/get "test")
+                                   (query/get-field "value")
+                                   (query/run (:conn this)))]
+                        (assoc op
+                          :value {:test result}
+                          :type :ok))
 
-      :write ((-> (query/db db)
-                  (query/table table)
-                  (query/insert {:id "test" :value (:value op)}
-                                {"conflict" "update"})
-                  (query/run (:conn this)))
-               (assoc op :type :ok))
+            :write ((-> (query/db db)
+                        (query/table table)
+                        (query/insert {:id "test" :value (:value op)}
+                                      {"conflict" "update"})
+                        (query/run (:conn this)))
+                     (assoc op :type :ok))
 
-      :cas (let [row (-> (query/db db)
-                          (query/table table)
-                          (query/get "test"))]
-                (-> (query/update row (query/fn [row]
-                                        (if (query/eq (query/get-field row :value) (first (:value op)))
-                                            {:value (last (:value op))})))
-                    (query/run (:conn this)))
-             (assoc op :type :ok))))
+            :cas (let [row (-> (query/db db)
+                                (query/table table)
+                                (query/get "test"))]
+                      (-> (query/update row 
+                                      (query/fn [row]
+                                            (if (query/eq (query/get-field row :value) (first (:value op)))
+                                                {:value (last (:value op))})))
+                          (query/run (:conn this)))
+                   (assoc op :type :ok)))))
 
   (teardown! [this test]
     (query/run (query/db-drop db) (:conn this))
@@ -94,8 +109,7 @@
 (defn cas [_ _] {:type :invoke, :f :cas, :value [(rand-int 5) (rand-int 5)]})
 
 (defn std-gen
-  "Takes a client generator and wraps it in a typical schedule and nemesis
-  causing failover."
+  "Takes a client generator and wraps it in a typical schedule and nemesis causing failover."
   [gen]
   (gen/phases
     (->> gen
@@ -106,7 +120,7 @@
                             {:type :info :f :start}])))
          (gen/time-limit 6))))
 
-;The skeleton is fixed used by aphyr at various places. Only the client is to be implemented for our use case.
+; The skeleton is fixed used by aphyr at various places. Only the client is to be implemented for our use case.
 (defn cas-test [version write-mode read-mode]
   "Test to perform"
   (merge tests/noop-test

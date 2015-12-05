@@ -1,0 +1,7 @@
+
+lein test jepson.rethinkdb-test
+INFO  jepsen.os.debian - :n4 setting up debian
+INFO  jepsen.os.debian - :n2 setting up debian
+INFO  jepsen.os.debian - :n1 setting up debian
+INFO  jepsen.os.debian - :n5 setting up debian
+INFO  jepsen.os.debian - :n3 setting up debian
