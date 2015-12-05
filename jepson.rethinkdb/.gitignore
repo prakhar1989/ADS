@@ -1,5 +1,6 @@
 /target
 /classes
+log
 /checkouts
 pom.xml
 pom.xml.asc
@@ -11,3 +12,4 @@ pom.xml.asc
 .hg/
 .idea/*
 *.iml
+store/rethnkdb2.2.0~0jessie/*

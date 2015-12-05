@@ -55,12 +55,11 @@
     (case (:f op)
       :read (let [result (-> (query/db db)
                              (query/table table)
-                             (query/get ("test"))
+                             (query/get "test")
                              (query/get-field "value")
                              (query/run (:conn this)))]
-              (info result)
                   (assoc op
-                    :value result
+                    :value {:test result}
                     :type :ok))
 
       :write ((-> (query/db db)
@@ -72,7 +71,7 @@
 
       :cas (let [row (-> (query/db db)
                           (query/table table)
-                          (query/get ("test")))]
+                          (query/get "test"))]
                 (-> (query/update row (query/fn [row]
                                         (if (query/eq (query/get-field row :value) (first (:value op)))
                                             {:value (last (:value op))})))
@@ -119,4 +118,4 @@
           :checker    (checker/compose {:linear checker/linearizable
                                         :latency (checker/latency-graph)})
           :nemesis    (nemesis/partition-random-halves)
-          :generator  (std-gen (gen/mix [r w r]))}))
+          :generator  (std-gen (gen/mix [r w cas]))}))
