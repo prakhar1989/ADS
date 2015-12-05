@@ -1,0 +1,60 @@
+4	:invoke	:write	4
+1	:invoke	:read	nil
+3	:invoke	:write	1
+2	:invoke	:write	4
+0	:invoke	:read	nil
+0	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+1	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+2	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+3	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+4	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+5	:invoke	:read	nil
+5	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+6	:invoke	:read	nil
+6	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+7	:invoke	:write	2
+7	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+9	:invoke	:read	nil
+9	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+8	:invoke	:write	2
+8	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+10	:invoke	:write	3
+11	:invoke	:write	4
+11	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+10	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+12	:invoke	:read	nil
+12	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+14	:invoke	:read	nil
+14	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+13	:invoke	:write	4
+13	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+16	:invoke	:read	nil
+16	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+15	:invoke	:read	nil
+15	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+17	:invoke	:read	nil
+17	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+19	:invoke	:read	nil
+19	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+18	:invoke	:write	2
+18	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+21	:invoke	:write	3
+21	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+20	:invoke	:read	nil
+20	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+22	:invoke	:write	2
+24	:invoke	:read	nil
+24	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+22	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+23	:invoke	:write	4
+23	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+26	:invoke	:read	nil
+26	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+25	:invoke	:write	0
+29	:invoke	:read	nil
+29	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+27	:invoke	:read	nil
+27	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"
+25	:info	:write	"indeterminate: Assert failed: (= (:process op) (:process completion))"
+28	:invoke	:read	nil
+28	:info	:read	"indeterminate: java.lang.String cannot be cast to clojure.lang.IFn"

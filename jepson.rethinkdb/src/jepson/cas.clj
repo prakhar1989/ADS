@@ -120,4 +120,3 @@
                                         :latency (checker/latency-graph)})
           :nemesis    (nemesis/partition-random-halves)
           :generator  (std-gen (gen/mix [r w r]))}))
-
