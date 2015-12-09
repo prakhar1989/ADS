@@ -1,0 +1,3002 @@
+
+lein test jepson.rethinkdb-test
+INFO  jepsen.os.debian - :n4 setting up debian
+INFO  jepsen.os.debian - :n1 setting up debian
+INFO  jepsen.os.debian - :n3 setting up debian
+INFO  jepsen.os.debian - :n2 setting up debian
+INFO  jepsen.os.debian - :n5 setting up debian
+INFO  jepson.rethinkdb - :n4 tearing down
+INFO  jepson.rethinkdb - :n4 set up
+INFO  jepson.rethinkdb - :n1 tearing down
+INFO  jepson.rethinkdb - :n5 tearing down
+INFO  jepson.rethinkdb - :n1 set up
+INFO  jepson.rethinkdb - :n3 tearing down
+INFO  jepson.rethinkdb - :n2 tearing down
+INFO  jepson.rethinkdb - :n3 set up
+INFO  jepson.rethinkdb - :n2 set up
+INFO  jepson.rethinkdb - :n5 set up
+INFO  jepson.rethinkdb - :n5 starting rethinkdb
+INFO  jepson.rethinkdb - :n2 starting rethinkdb
+INFO  jepson.rethinkdb - :n4 starting rethinkdb
+INFO  jepson.rethinkdb - :n3 starting rethinkdb
+INFO  jepson.rethinkdb - :n1 starting rethinkdb
+INFO  jepson.rethinkdb - :n2 rethinkdb up
+ERROR rethinkdb.core - Error connecting to RethinkDB database
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at rethinkdb.core$connect.doInvoke(core.clj:59)
+	at clojure.lang.RestFn.invoke(RestFn.java:457)
+	at jepson.rethinkdb$connection.invoke(rethinkdb.clj:17)
+	at jepson.rethinkdb$retry$fn__14406.invoke(rethinkdb.clj:25)
+	at jepson.rethinkdb$retry.invoke(rethinkdb.clj:25)
+	at jepson.rethinkdb$show_dbinfo.invoke(rethinkdb.clj:67)
+	at jepson.rethinkdb$db$reify__14426.setup_BANG_(rethinkdb.clj:79)
+	at jepsen.db$cycle_BANG_.invoke(db.clj:25)
+	at clojure.core$partial$fn__4527.invoke(core.clj:2494)
+	at jepsen.core$on_nodes$fn__6692.invoke(core.clj:86)
+	at clojure.core$pmap$fn__6744$fn__6745.invoke(core.clj:6729)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepson.rethinkdb - :n5 rethinkdb up
+INFO  jepson.rethinkdb - Node not up yet. Will try again
+ERROR rethinkdb.core - Error connecting to RethinkDB database
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at rethinkdb.core$connect.doInvoke(core.clj:59)
+	at clojure.lang.RestFn.invoke(RestFn.java:457)
+	at jepson.rethinkdb$connection.invoke(rethinkdb.clj:17)
+	at jepson.rethinkdb$retry$fn__14406.invoke(rethinkdb.clj:25)
+	at jepson.rethinkdb$retry.invoke(rethinkdb.clj:25)
+	at jepson.rethinkdb$show_dbinfo.invoke(rethinkdb.clj:67)
+	at jepson.rethinkdb$db$reify__14426.setup_BANG_(rethinkdb.clj:79)
+	at jepsen.db$cycle_BANG_.invoke(db.clj:25)
+	at clojure.core$partial$fn__4527.invoke(core.clj:2494)
+	at jepsen.core$on_nodes$fn__6692.invoke(core.clj:86)
+	at clojure.core$pmap$fn__6744$fn__6745.invoke(core.clj:6729)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepson.rethinkdb - :n2 rethinkdb ready
+INFO  jepson.rethinkdb - Node not up yet. Will try again
+INFO  jepson.rethinkdb - :n5 rethinkdb ready
+INFO  jepson.rethinkdb - :n4 rethinkdb up
+ERROR rethinkdb.core - Error connecting to RethinkDB database
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at rethinkdb.core$connect.doInvoke(core.clj:59)
+	at clojure.lang.RestFn.invoke(RestFn.java:457)
+	at jepson.rethinkdb$connection.invoke(rethinkdb.clj:17)
+	at jepson.rethinkdb$retry$fn__14406.invoke(rethinkdb.clj:25)
+	at jepson.rethinkdb$retry.invoke(rethinkdb.clj:25)
+	at jepson.rethinkdb$show_dbinfo.invoke(rethinkdb.clj:67)
+	at jepson.rethinkdb$db$reify__14426.setup_BANG_(rethinkdb.clj:79)
+	at jepsen.db$cycle_BANG_.invoke(db.clj:25)
+	at clojure.core$partial$fn__4527.invoke(core.clj:2494)
+	at jepsen.core$on_nodes$fn__6692.invoke(core.clj:86)
+	at clojure.core$pmap$fn__6744$fn__6745.invoke(core.clj:6729)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepson.rethinkdb - Node not up yet. Will try again
+INFO  jepson.rethinkdb - :n4 rethinkdb ready
+INFO  jepson.rethinkdb - :n3 rethinkdb up
+ERROR rethinkdb.core - Error connecting to RethinkDB database
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at rethinkdb.core$connect.doInvoke(core.clj:59)
+	at clojure.lang.RestFn.invoke(RestFn.java:457)
+	at jepson.rethinkdb$connection.invoke(rethinkdb.clj:17)
+	at jepson.rethinkdb$retry$fn__14406.invoke(rethinkdb.clj:25)
+	at jepson.rethinkdb$retry.invoke(rethinkdb.clj:25)
+	at jepson.rethinkdb$show_dbinfo.invoke(rethinkdb.clj:67)
+	at jepson.rethinkdb$db$reify__14426.setup_BANG_(rethinkdb.clj:79)
+	at jepsen.db$cycle_BANG_.invoke(db.clj:25)
+	at clojure.core$partial$fn__4527.invoke(core.clj:2494)
+	at jepsen.core$on_nodes$fn__6692.invoke(core.clj:86)
+	at clojure.core$pmap$fn__6744$fn__6745.invoke(core.clj:6729)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepson.rethinkdb - Node not up yet. Will try again
+INFO  jepson.rethinkdb - :n3 rethinkdb ready
+INFO  jepson.rethinkdb - :n1 rethinkdb up
+INFO  jepson.rethinkdb - :n1 rethinkdb ready
+INFO  jepson.cas - Connected
+INFO  jepson.cas - Connected
+INFO  jepson.cas - Connected
+INFO  jepson.cas - Connected
+INFO  jepson.cas - Connected
+INFO  jepson.cas - :n4 Created db.
+INFO  jepson.cas - :n4 Created table.
+INFO  jepson.rethinkdb - Node not up yet. Will try again
+INFO  jepson.cas - :n4 Write acks set.
+INFO  jepson.cas - :n4 Client setup complete
+INFO  jepsen.core - Worker 4 starting
+INFO  jepsen.core - Worker 2 starting
+INFO  jepsen.core - Worker 0 starting
+INFO  jepsen.core - Worker 1 starting
+INFO  jepsen.core - Worker 3 starting
+INFO  jepsen.util - 0	:invoke	:read	[0 nil]
+INFO  jepsen.util - 4	:invoke	:write	[0 4]
+INFO  jepsen.util - 3	:invoke	:read	[0 nil]
+INFO  jepsen.util - 1	:invoke	:write	[0 0]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform get_field on a non-object non-sequence `null`.
+ :data {:t 18, :e 3100000, :r [Cannot perform get_field on a non-object non-sequence `null`.], :b [0]}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform get_field on a non-object non-sequence `null`.
+   :data {:t 18, :e 3100000, :r [Cannot perform get_field on a non-object non-sequence `null`.], :b [0]}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 3	:fail	:read	[0 nil]	clojure.lang.ExceptionInfo: Cannot perform get_field on a non-object non-sequence `null`. {:t 18, :e 3100000, :r ["Cannot perform get_field on a non-object non-sequence `null`."], :b [0]}
+INFO  jepsen.util - 2	:invoke	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform get_field on a non-object non-sequence `null`.
+ :data {:t 18, :e 3100000, :r [Cannot perform get_field on a non-object non-sequence `null`.], :b [0]}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform get_field on a non-object non-sequence `null`.
+   :data {:t 18, :e 3100000, :r [Cannot perform get_field on a non-object non-sequence `null`.], :b [0]}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 0	:fail	:read	[0 nil]	clojure.lang.ExceptionInfo: Cannot perform get_field on a non-object non-sequence `null`. {:t 18, :e 3100000, :r ["Cannot perform get_field on a non-object non-sequence `null`."], :b [0]}
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 4 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 1 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 2	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 3	:invoke	:read	[0 nil]
+INFO  jepsen.util - 3	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 6	:invoke	:read	[0 nil]
+INFO  jepsen.util - 0	:invoke	:write	[0 1]
+INFO  jepsen.util - 9	:invoke	:write	[0 0]
+INFO  jepsen.util - 2	:invoke	:read	[0 nil]
+INFO  jepsen.util - 6	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 0 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 9 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 2	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 3	:invoke	:cas	[0 [0 1]]
+INFO  jepsen.util - 6	:invoke	:read	[0 nil]
+INFO  jepsen.util - 5	:invoke	:read	[0 nil]
+INFO  jepsen.util - 3	:ok	:cas	[0 [0 1]]
+INFO  jepsen.util - 14	:invoke	:cas	[0 [3 1]]
+INFO  jepsen.util - 6	:ok	:read	{:test [0 1]}
+INFO  jepsen.util - 5	:ok	:read	{:test [0 1]}
+INFO  jepsen.util - 14	:ok	:cas	[0 [3 1]]
+INFO  jepsen.util - 2	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 2	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 6	:invoke	:read	[0 nil]
+INFO  jepsen.util - 3	:invoke	:read	[0 nil]
+INFO  jepsen.util - 14	:invoke	:read	[0 nil]
+INFO  jepsen.util - 5	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 6	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 3	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 14	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 5	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 2	:invoke	:read	[0 nil]
+INFO  jepsen.util - 2	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 6	:invoke	:read	[0 nil]
+INFO  jepsen.util - 3	:invoke	:cas	[0 [3 1]]
+INFO  jepsen.util - 14	:invoke	:read	[0 nil]
+INFO  jepsen.util - 6	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 3	:ok	:cas	[0 [3 1]]
+INFO  jepsen.util - 14	:ok	:read	{:test [3 1]}
+INFO  jepsen.util - 5	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 5 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 2	:invoke	:read	[0 nil]
+INFO  jepsen.util - 2	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 14	:invoke	:read	[0 nil]
+INFO  jepsen.util - 14	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 6	:invoke	:cas	[0 [2 3]]
+INFO  jepsen.util - 3	:invoke	:write	[0 3]
+INFO  jepsen.util - 6	:ok	:cas	[0 [2 3]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 3 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 10	:invoke	:read	[0 nil]
+INFO  jepsen.util - 10	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 2	:invoke	:read	[0 nil]
+INFO  jepsen.util - 2	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 14	:invoke	:cas	[0 [2 3]]
+INFO  jepsen.util - 14	:ok	:cas	[0 [2 3]]
+INFO  jepsen.util - 6	:invoke	:write	[0 2]
+INFO  jepsen.util - 8	:invoke	:read	[0 nil]
+INFO  jepsen.util - 8	:ok	:read	{:test [2 3]}
+INFO  jepsen.util - 10	:invoke	:read	[0 nil]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 6 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 2	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 10	:ok	:read	{:test [0 2]}
+INFO  jepsen.util - 2	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 14	:invoke	:read	[0 nil]
+INFO  jepsen.util - 14	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 8	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 11	:invoke	:cas	[0 [3 3]]
+INFO  jepsen.util - 8	:ok	:cas	[0 [2 1]]
+INFO  jepsen.util - 11	:ok	:cas	[0 [3 3]]
+INFO  jepsen.util - 10	:invoke	:read	[0 nil]
+INFO  jepsen.util - 10	:ok	:read	{:test [3 3]}
+INFO  jepsen.util - 2	:invoke	:cas	[0 [3 0]]
+INFO  jepsen.util - 2	:ok	:cas	[0 [3 0]]
+INFO  jepsen.util - 14	:invoke	:read	[0 nil]
+INFO  jepsen.util - 8	:invoke	:read	[0 nil]
+INFO  jepsen.util - 14	:ok	:read	{:test [3 0]}
+INFO  jepsen.util - 8	:ok	:read	{:test [3 0]}
+INFO  jepsen.util - 11	:invoke	:read	[0 nil]
+INFO  jepsen.util - 11	:ok	:read	{:test [3 0]}
+INFO  jepsen.util - 2	:invoke	:read	[0 nil]
+INFO  jepsen.util - 10	:invoke	:read	[0 nil]
+INFO  jepsen.util - 10	:ok	:read	{:test [3 0]}
+INFO  jepsen.util - 2	:ok	:read	{:test [3 0]}
+INFO  jepsen.util - 8	:invoke	:cas	[0 [3 0]]
+INFO  jepsen.util - 14	:invoke	:read	[0 nil]
+INFO  jepsen.util - 8	:ok	:cas	[0 [3 0]]
+INFO  jepsen.util - 14	:ok	:read	{:test [3 0]}
+INFO  jepsen.util - 11	:invoke	:cas	[0 [1 2]]
+INFO  jepsen.util - 10	:invoke	:read	[0 nil]
+INFO  jepsen.util - 11	:ok	:cas	[0 [1 2]]
+INFO  jepsen.util - 10	:ok	:read	{:test [1 2]}
+INFO  jepsen.util - 2	:invoke	:read	[0 nil]
+INFO  jepsen.util - 2	:ok	:read	{:test [1 2]}
+INFO  jepsen.util - 8	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 14	:invoke	:cas	[0 [4 4]]
+INFO  jepsen.util - 14	:ok	:cas	[0 [4 4]]
+INFO  jepsen.util - 8	:ok	:cas	[0 [1 0]]
+INFO  jepsen.util - 10	:invoke	:write	[0 4]
+INFO  jepsen.util - 11	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 10 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 11	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 2	:invoke	:cas	[0 [4 4]]
+INFO  jepsen.util - 2	:ok	:cas	[0 [4 4]]
+INFO  jepsen.util - 8	:invoke	:read	[0 nil]
+INFO  jepsen.util - 14	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 8	:ok	:read	{:test [4 4]}
+INFO  jepsen.util - 14	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 11	:invoke	:write	[0 4]
+INFO  jepsen.util - 15	:invoke	:write	[0 2]
+INFO  jepsen.util - 2	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 11 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 15 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 2 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 14	:invoke	:read	[0 nil]
+INFO  jepsen.util - 8	:invoke	:read	[0 nil]
+INFO  jepsen.util - 14	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 8	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 7	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 16	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 7	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 16	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 20	:invoke	:cas	[0 [3 3]]
+INFO  jepsen.util - 20	:ok	:cas	[0 [3 3]]
+INFO  jepsen.util - 14	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 14 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 8	:invoke	:cas	[0 [1 3]]
+INFO  jepsen.util - 8	:ok	:cas	[0 [1 3]]
+INFO  jepsen.util - 20	:invoke	:cas	[0 [4 1]]
+INFO  jepsen.util - 7	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 16	:invoke	:read	[0 nil]
+INFO  jepsen.util - 20	:ok	:cas	[0 [4 1]]
+INFO  jepsen.util - 7	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 16	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 19	:invoke	:read	[0 nil]
+INFO  jepsen.util - 19	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 8	:invoke	:read	[0 nil]
+INFO  jepsen.util - 8	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 7	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 20	:invoke	:read	[0 nil]
+INFO  jepsen.util - 7	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 20	:ok	:read	{:test [3 4]}
+INFO  jepsen.util - 16	:invoke	:cas	[0 [4 4]]
+INFO  jepsen.util - 16	:ok	:cas	[0 [4 4]]
+INFO  jepsen.util - 8	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 19	:invoke	:read	[0 nil]
+INFO  jepsen.util - 19	:ok	:read	{:test [4 4]}
+INFO  jepsen.util - 8	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 7	:invoke	:read	[0 nil]
+INFO  jepsen.util - 20	:invoke	:read	[0 nil]
+INFO  jepsen.util - 7	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 20	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 16	:invoke	:write	[0 0]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 16 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 19	:invoke	:write	[0 3]
+INFO  jepsen.util - 8	:invoke	:cas	[0 [2 4]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 19 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 8	:ok	:cas	[0 [2 4]]
+INFO  jepsen.util - 20	:invoke	:write	[0 0]
+INFO  jepsen.util - 7	:invoke	:cas	[0 [1 1]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 20 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 7	:ok	:cas	[0 [1 1]]
+INFO  jepsen.util - 21	:invoke	:cas	[0 [2 3]]
+INFO  jepsen.util - 21	:ok	:cas	[0 [2 3]]
+INFO  jepsen.util - 8	:invoke	:cas	[0 [1 3]]
+INFO  jepsen.util - 24	:invoke	:cas	[0 [1 2]]
+INFO  jepsen.util - 24	:ok	:cas	[0 [1 2]]
+INFO  jepsen.util - 8	:ok	:cas	[0 [1 3]]
+INFO  jepsen.util - 7	:invoke	:read	[0 nil]
+INFO  jepsen.util - 25	:invoke	:read	[0 nil]
+INFO  jepsen.util - 7	:ok	:read	{:test [1 2]}
+INFO  jepsen.util - 25	:ok	:read	{:test [1 2]}
+INFO  jepsen.util - 21	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 21	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 24	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 8	:invoke	:write	[0 0]
+INFO  jepsen.util - 24	:ok	:cas	[0 [1 0]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 8 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 7	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 25	:invoke	:cas	[0 [1 2]]
+INFO  jepsen.util - 7	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 21	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 25	:ok	:cas	[0 [1 2]]
+INFO  jepsen.util - 21	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 24	:invoke	:cas	[0 [4 0]]
+INFO  jepsen.util - 13	:invoke	:read	[0 nil]
+INFO  jepsen.util - 24	:ok	:cas	[0 [4 0]]
+INFO  jepsen.util - 13	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 7	:invoke	:read	[0 nil]
+INFO  jepsen.util - 25	:invoke	:read	[0 nil]
+INFO  jepsen.util - 7	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 21	:invoke	:read	[0 nil]
+INFO  jepsen.util - 25	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 21	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 13	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 13	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 24	:invoke	:cas	[0 [3 1]]
+INFO  jepsen.util - 24	:ok	:cas	[0 [3 1]]
+INFO  jepsen.util - 7	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 25	:invoke	:read	[0 nil]
+INFO  jepsen.util - 7	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 25	:ok	:read	{:test [4 3]}
+INFO  jepsen.util - 21	:invoke	:read	[0 nil]
+INFO  jepsen.util - 21	:ok	:read	{:test [4 3]}
+INFO  jepsen.util - 13	:invoke	:read	[0 nil]
+INFO  jepsen.util - 24	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 13	:ok	:read	{:test [4 3]}
+INFO  jepsen.util - 24	:ok	:cas	[0 [1 0]]
+INFO  jepsen.util - 7	:invoke	:read	[0 nil]
+INFO  jepsen.util - 7	:ok	:read	{:test [1 0]}
+INFO  jepsen.util - 25	:invoke	:cas	[0 [2 3]]
+INFO  jepsen.util - 25	:ok	:cas	[0 [2 3]]
+INFO  jepsen.util - 21	:invoke	:read	[0 nil]
+INFO  jepsen.util - 21	:ok	:read	{:test [2 3]}
+INFO  jepsen.util - 13	:invoke	:read	[0 nil]
+INFO  jepsen.util - 13	:ok	:read	{:test [2 3]}
+INFO  jepsen.util - 24	:invoke	:cas	[0 [1 1]]
+INFO  jepsen.util - 24	:ok	:cas	[0 [1 1]]
+INFO  jepsen.util - 7	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 25	:invoke	:write	[0 4]
+INFO  jepsen.util - 7	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 25 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 21	:invoke	:cas	[0 [4 1]]
+INFO  jepsen.util - 21	:ok	:cas	[0 [4 1]]
+INFO  jepsen.util - 13	:invoke	:cas	[0 [4 2]]
+INFO  jepsen.util - 24	:invoke	:read	[0 nil]
+INFO  jepsen.util - 13	:ok	:cas	[0 [4 2]]
+INFO  jepsen.util - 24	:ok	:read	{:test [4 2]}
+INFO  jepsen.util - 7	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 30	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 7	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 30	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 21	:invoke	:read	[0 nil]
+INFO  jepsen.util - 21	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 24	:invoke	:read	[0 nil]
+INFO  jepsen.util - 24	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 13	:invoke	:cas	[0 [1 2]]
+INFO  jepsen.util - 13	:ok	:cas	[0 [1 2]]
+INFO  jepsen.util - 30	:invoke	:read	[0 nil]
+INFO  jepsen.util - 7	:invoke	:read	[0 nil]
+INFO  jepsen.util - 30	:ok	:read	{:test [1 2]}
+INFO  jepsen.util - 7	:ok	:read	{:test [1 2]}
+INFO  jepsen.util - 21	:invoke	:read	[0 nil]
+INFO  jepsen.util - 21	:ok	:read	{:test [1 2]}
+INFO  jepsen.util - 24	:invoke	:cas	[0 [4 1]]
+INFO  jepsen.util - 24	:ok	:cas	[0 [4 1]]
+INFO  jepsen.util - 13	:invoke	:cas	[0 [4 0]]
+INFO  jepsen.util - 13	:ok	:cas	[0 [4 0]]
+INFO  jepsen.util - 7	:invoke	:write	[0 2]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 7 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 30	:invoke	:cas	[0 [3 2]]
+INFO  jepsen.util - 30	:ok	:cas	[0 [3 2]]
+INFO  jepsen.util - 21	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 21 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 24	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 24	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 13	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 13 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 12	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 12 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 30	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 30	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 26	:invoke	:cas	[0 [3 1]]
+INFO  jepsen.util - 26	:ok	:cas	[0 [3 1]]
+INFO  jepsen.util - 24	:invoke	:cas	[0 [1 1]]
+INFO  jepsen.util - 24	:ok	:cas	[0 [1 1]]
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 17	:invoke	:read	[0 nil]
+INFO  jepsen.util - 18	:ok	:read	{:test [1 1]}
+INFO  jepsen.util - 17	:ok	:read	{:test [1 1]}
+INFO  jepsen.util - 30	:invoke	:write	[0 0]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 30 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 26	:invoke	:read	[0 nil]
+INFO  jepsen.util - 26	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 24	:invoke	:write	[0 3]
+INFO  jepsen.util - 18	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 24 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 17	:invoke	:read	[0 nil]
+INFO  jepsen.util - 18	:ok	:cas	[0 [2 1]]
+INFO  jepsen.util - 17	:ok	:read	{:test [2 1]}
+INFO  jepsen.util - 35	:invoke	:read	[0 nil]
+INFO  jepsen.util - 35	:ok	:read	{:test [2 1]}
+INFO  jepsen.util - 26	:invoke	:write	[0 0]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 26 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 29	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 29 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 17	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 18	:ok	:read	{:test [0 1]}
+INFO  jepsen.util - 17	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 35	:invoke	:read	[0 nil]
+INFO  jepsen.util - 35	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 31	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 31 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 34	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 18	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 17	:invoke	:cas	[0 [0 3]]
+INFO  jepsen.util - 18	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 17	:ok	:cas	[0 [0 3]]
+INFO  jepsen.util - 35	:invoke	:read	[0 nil]
+INFO  jepsen.util - 35	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 36	:invoke	:read	[0 nil]
+INFO  jepsen.util - 36	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 34	:invoke	:cas	[0 [4 1]]
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 34	:ok	:cas	[0 [4 1]]
+INFO  jepsen.util - 18	:ok	:read	{:test [4 1]}
+INFO  jepsen.util - 17	:invoke	:write	[0 0]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 17 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 35	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 35	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 36	:invoke	:read	[0 nil]
+INFO  jepsen.util - 36	:ok	:read	{:test [3 4]}
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 18	:ok	:read	{:test [3 4]}
+INFO  jepsen.util - 34	:invoke	:cas	[0 [0 3]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [0 3]]
+INFO  jepsen.util - 22	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 22	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 35	:invoke	:read	[0 nil]
+INFO  jepsen.util - 35	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 36	:invoke	:read	[0 nil]
+INFO  jepsen.util - 36	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 18	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 34	:invoke	:cas	[0 [2 0]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [2 0]]
+INFO  jepsen.util - 22	:invoke	:read	[0 nil]
+INFO  jepsen.util - 22	:ok	:read	{:test [2 0]}
+INFO  jepsen.util - 35	:invoke	:write	[0 2]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 35 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 36	:invoke	:read	[0 nil]
+INFO  jepsen.util - 36	:ok	:read	{:test [0 2]}
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 18	:ok	:read	{:test [0 2]}
+INFO  jepsen.util - 34	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 22	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 22	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 40	:invoke	:read	[0 nil]
+INFO  jepsen.util - 40	:ok	:read	{:test [1 4]}
+INFO  jepsen.util - 36	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 36 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 18	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 34	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 22	:invoke	:write	[0 3]
+INFO  jepsen.util - 40	:invoke	:cas	[0 [2 4]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 22 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 40	:ok	:cas	[0 [2 4]]
+INFO  jepsen.util - 41	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 41	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 18	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 18	:ok	:cas	[0 [1 0]]
+INFO  jepsen.util - 34	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 40	:invoke	:read	[0 nil]
+INFO  jepsen.util - 27	:invoke	:write	[0 4]
+INFO  jepsen.util - 40	:ok	:read	{:test [1 4]}
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 27 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 41	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 41	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 18	:invoke	:cas	[0 [2 3]]
+INFO  jepsen.util - 18	:ok	:cas	[0 [2 3]]
+INFO  jepsen.util - 34	:invoke	:read	[0 nil]
+INFO  jepsen.util - 34	:ok	:read	{:test [2 3]}
+INFO  jepsen.util - 40	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 40	:ok	:cas	[0 [2 1]]
+INFO  jepsen.util - 32	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 32 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 41	:invoke	:read	[0 nil]
+INFO  jepsen.util - 41	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 18	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 34	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 40	:invoke	:read	[0 nil]
+INFO  jepsen.util - 40	:ok	:read	{:test [1 4]}
+INFO  jepsen.util - 37	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 37	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 41	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 41 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 18	:invoke	:read	[0 nil]
+INFO  jepsen.util - 18	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 34	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 40	:invoke	:read	[0 nil]
+INFO  jepsen.util - 40	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 37	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 37	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 46	:invoke	:read	[0 nil]
+INFO  jepsen.util - 46	:ok	:read	{:test [1 4]}
+INFO  jepsen.util - 18	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 18	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 34	:invoke	:read	[0 nil]
+INFO  jepsen.util - 34	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 40	:invoke	:read	[0 nil]
+INFO  jepsen.util - 40	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 37	:invoke	:read	[0 nil]
+INFO  jepsen.util - 46	:invoke	:cas	[0 [3 0]]
+INFO  jepsen.util - 37	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 46	:ok	:cas	[0 [3 0]]
+INFO  jepsen.util - 18	:invoke	:cas	[0 [1 3]]
+INFO  jepsen.util - 18	:ok	:cas	[0 [1 3]]
+INFO  jepsen.util - 34	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 40	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 40 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 46	:invoke	:write	[0 2]
+INFO  jepsen.util - 37	:invoke	:cas	[0 [4 4]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 46 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 37	:ok	:cas	[0 [4 4]]
+INFO  jepsen.util - 18	:invoke	:cas	[0 [3 1]]
+INFO  jepsen.util - 18	:ok	:cas	[0 [3 1]]
+INFO  jepsen.util - 34	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [1 0]]
+INFO  jepsen.util - 45	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 45	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 37	:invoke	:cas	[0 [4 0]]
+INFO  jepsen.util - 51	:invoke	:read	[0 nil]
+INFO  jepsen.util - 37	:ok	:cas	[0 [4 0]]
+INFO  jepsen.util - 51	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 18	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 18 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 34	:invoke	:cas	[0 [1 1]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [1 1]]
+INFO  jepsen.util - 45	:invoke	:write	[0 2]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 45 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 51	:invoke	:cas	[0 [3 3]]
+INFO  jepsen.util - 37	:invoke	:cas	[0 [4 2]]
+INFO  jepsen.util - 37	:ok	:cas	[0 [4 2]]
+INFO  jepsen.util - 51	:ok	:cas	[0 [3 3]]
+INFO  jepsen.util - 23	:invoke	:read	[0 nil]
+INFO  jepsen.util - 23	:ok	:read	{:test [4 2]}
+INFO  jepsen.util - 34	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 50	:invoke	:write	[0 2]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 50 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 37	:invoke	:read	[0 nil]
+INFO  jepsen.util - 51	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 37	:ok	:read	{:test [0 2]}
+INFO  jepsen.util - 51	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 23	:invoke	:cas	[0 [1 1]]
+INFO  jepsen.util - 23	:ok	:cas	[0 [1 1]]
+INFO  jepsen.util - 34	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 55	:invoke	:cas	[0 [4 4]]
+INFO  jepsen.util - 55	:ok	:cas	[0 [4 4]]
+INFO  jepsen.util - 51	:invoke	:write	[0 2]
+INFO  jepsen.util - 37	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 51 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 37	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 23	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 23 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 34	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 34	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 56	:invoke	:read	[0 nil]
+INFO  jepsen.util - 55	:invoke	:write	[0 4]
+INFO  jepsen.util - 37	:invoke	:write	[0 1]
+INFO  jepsen.util - 56	:ok	:read	{:test [3 4]}
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 55 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 37 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 28	:invoke	:read	[0 nil]
+INFO  jepsen.util - 28	:ok	:read	{:test [0 1]}
+INFO  jepsen.util - 34	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 34 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 60	:invoke	:cas	[0 [1 2]]
+INFO  jepsen.util - 56	:invoke	:write	[0 4]
+INFO  jepsen.util - 60	:ok	:cas	[0 [1 2]]
+INFO  jepsen.util - 42	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 56 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 42 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 28	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 28	:ok	:cas	[0 [2 1]]
+INFO  jepsen.util - 39	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 39 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 60	:invoke	:cas	[0 [4 1]]
+INFO  jepsen.util - 61	:invoke	:read	[0 nil]
+INFO  jepsen.util - 47	:invoke	:write	[0 0]
+INFO  jepsen.util - 60	:ok	:cas	[0 [4 1]]
+INFO  jepsen.util - 61	:ok	:read	{:test [4 1]}
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 47 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 28	:invoke	:read	[0 nil]
+INFO  jepsen.util - 28	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 44	:invoke	:cas	[0 [3 1]]
+INFO  jepsen.util - 44	:ok	:cas	[0 [3 1]]
+INFO  jepsen.util - 60	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 60	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 61	:invoke	:read	[0 nil]
+INFO  jepsen.util - 52	:invoke	:write	[0 3]
+INFO  jepsen.util - 61	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 52 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 28	:invoke	:cas	[0 [2 4]]
+INFO  jepsen.util - 28	:ok	:cas	[0 [2 4]]
+INFO  jepsen.util - 44	:invoke	:read	[0 nil]
+INFO  jepsen.util - 44	:ok	:read	{:test [2 4]}
+INFO  jepsen.util - 60	:invoke	:read	[0 nil]
+INFO  jepsen.util - 60	:ok	:read	{:test [2 4]}
+INFO  jepsen.util - 57	:invoke	:write	[0 3]
+INFO  jepsen.util - 61	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 57 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 61	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 28	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 28 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 44	:invoke	:read	[0 nil]
+INFO  jepsen.util - 44	:ok	:read	{:test [0 1]}
+INFO  jepsen.util - 60	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 60	:ok	:cas	[0 [2 1]]
+INFO  jepsen.util - 62	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 61	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:cas	[0 [2 1]]
+INFO  jepsen.util - 61	:ok	:read	{:test [2 1]}
+INFO  jepsen.util - 33	:invoke	:read	[0 nil]
+INFO  jepsen.util - 33	:ok	:read	{:test [2 1]}
+INFO  jepsen.util - 44	:invoke	:cas	[0 [4 2]]
+INFO  jepsen.util - 44	:ok	:cas	[0 [4 2]]
+INFO  jepsen.util - 60	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 62	:invoke	:cas	[0 [3 2]]
+INFO  jepsen.util - 60	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 62	:ok	:cas	[0 [3 2]]
+INFO  jepsen.util - 61	:invoke	:cas	[0 [2 4]]
+INFO  jepsen.util - 61	:ok	:cas	[0 [2 4]]
+INFO  jepsen.util - 33	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 33 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 44	:invoke	:write	[0 4]
+INFO  jepsen.util - 60	:invoke	:read	[0 nil]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 44 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 60	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 62	:invoke	:cas	[0 [1 1]]
+INFO  jepsen.util - 62	:ok	:cas	[0 [1 1]]
+INFO  jepsen.util - 61	:invoke	:cas	[0 [0 3]]
+INFO  jepsen.util - 61	:ok	:cas	[0 [0 3]]
+INFO  jepsen.util - 38	:invoke	:cas	[0 [0 1]]
+INFO  jepsen.util - :nemesis	:info	:stop	nil
+INFO  jepsen.util - 38	:ok	:cas	[0 [0 1]]
+INFO  jepsen.util - 49	:invoke	:read	[0 nil]
+INFO  jepsen.util - 60	:invoke	:write	[0 1]
+INFO  jepsen.util - 49	:ok	:read	{:test [0 1]}
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 60 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 62	:invoke	:cas	[0 [4 0]]
+INFO  jepsen.util - 62	:ok	:cas	[0 [4 0]]
+INFO  jepsen.util - 61	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 61	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - :nemesis	:info	:stop	"fully connected"
+INFO  jepsen.util - :nemesis	:info	:start	nil
+INFO  jepsen.util - 38	:invoke	:cas	[0 [4 0]]
+INFO  jepsen.util - 38	:ok	:cas	[0 [4 0]]
+INFO  jepsen.util - 49	:invoke	:read	[0 nil]
+INFO  jepsen.util - 49	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 65	:invoke	:read	[0 nil]
+INFO  jepsen.util - 65	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 61	:invoke	:cas	[0 [2 0]]
+INFO  jepsen.util - 62	:invoke	:cas	[0 [2 4]]
+INFO  jepsen.util - 62	:ok	:cas	[0 [2 4]]
+INFO  jepsen.util - :nemesis	:info	:start	"Cut off {:n2 #{:n3 :n4 :n1}, :n5 #{:n3 :n4 :n1}, :n3 #{:n2 :n5}, :n4 #{:n2 :n5}, :n1 #{:n2 :n5}}"
+INFO  jepsen.util - 38	:invoke	:cas	[0 [4 0]]
+INFO  jepsen.util - 38	:ok	:cas	[0 [4 0]]
+INFO  jepsen.util - 49	:invoke	:read	[0 nil]
+INFO  jepsen.util - 65	:invoke	:read	[0 nil]
+INFO  jepsen.util - 65	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 38	:invoke	:cas	[0 [2 0]]
+INFO  jepsen.util - 38	:ok	:cas	[0 [2 0]]
+INFO  jepsen.util - 65	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 65	:ok	:cas	[0 [2 1]]
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [2 1]}
+INFO  jepsen.util - 38	:invoke	:write	[0 2]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 38 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 65	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 62	:invoke	:cas	[0 [4 0]]
+INFO  jepsen.util - 65	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 62	:ok	:cas	[0 [4 0]]
+INFO  jepsen.util - 43	:invoke	:cas	[0 [4 2]]
+INFO  jepsen.util - 43	:ok	:cas	[0 [4 2]]
+INFO  jepsen.util - 65	:invoke	:read	[0 nil]
+INFO  jepsen.util - 65	:ok	:read	{:test [4 2]}
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [4 2]}
+INFO  jepsen.util - 43	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 43 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 65	:invoke	:read	[0 nil]
+INFO  jepsen.util - 65	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 48	:invoke	:cas	[0 [3 3]]
+INFO  jepsen.util - 48	:ok	:cas	[0 [3 3]]
+INFO  jepsen.util - 65	:invoke	:read	[0 nil]
+INFO  jepsen.util - 65	:ok	:read	{:test [3 3]}
+INFO  jepsen.util - 62	:invoke	:cas	[0 [0 3]]
+INFO  jepsen.util - 62	:ok	:cas	[0 [0 3]]
+INFO  jepsen.util - 48	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 48 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 65	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 65 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 53	:invoke	:read	[0 nil]
+INFO  jepsen.util - 53	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 70	:invoke	:read	[0 nil]
+INFO  jepsen.util - 70	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 53	:invoke	:cas	[0 [3 2]]
+INFO  jepsen.util - 53	:ok	:cas	[0 [3 2]]
+INFO  jepsen.util - 70	:invoke	:read	[0 nil]
+INFO  jepsen.util - 70	:ok	:read	{:test [3 2]}
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [3 2]}
+INFO  jepsen.util - 53	:invoke	:cas	[0 [2 4]]
+INFO  jepsen.util - 53	:ok	:cas	[0 [2 4]]
+INFO  jepsen.util - 70	:invoke	:read	[0 nil]
+INFO  jepsen.util - 70	:ok	:read	{:test [2 4]}
+INFO  jepsen.util - 62	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 62	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 53	:invoke	:cas	[0 [1 2]]
+INFO  jepsen.util - 53	:ok	:cas	[0 [1 2]]
+INFO  jepsen.util - 70	:invoke	:cas	[0 [4 4]]
+INFO  jepsen.util - 70	:ok	:cas	[0 [4 4]]
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [4 4]}
+INFO  jepsen.util - 53	:invoke	:read	[0 nil]
+INFO  jepsen.util - 53	:ok	:read	{:test [4 4]}
+INFO  jepsen.util - 70	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 70	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 53	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 53	:ok	:cas	[0 [2 1]]
+INFO  jepsen.util - 70	:invoke	:cas	[0 [3 0]]
+INFO  jepsen.util - 70	:ok	:cas	[0 [3 0]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: lost contact with primary replica
+ :data {:t 18, :e 4200000, :r [Cannot perform write: lost contact with primary replica], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: lost contact with primary replica
+   :data {:t 18, :e 4200000, :r [Cannot perform write: lost contact with primary replica], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 61	:info	:cas	[0 [2 0]]	clojure.lang.ExceptionInfo: Cannot perform write: lost contact with primary replica {:t 18, :e 4200000, :r ["Cannot perform write: lost contact with primary replica"], :b []}
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: lost contact with primary replica
+ :data {:t 18, :e 4100000, :r [Cannot perform read: lost contact with primary replica], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: lost contact with primary replica
+   :data {:t 18, :e 4100000, :r [Cannot perform read: lost contact with primary replica], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:read	[0 nil]
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [3 0]}
+INFO  jepsen.util - 53	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 53 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 70	:invoke	:cas	[0 [4 2]]
+INFO  jepsen.util - 70	:ok	:cas	[0 [4 2]]
+INFO  jepsen.util - 49	:invoke	:write	[0 3]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:write	[0 3]
+INFO  jepsen.util - 66	:invoke	:write	[0 1]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:write	[0 1]
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [4 2]}
+INFO  jepsen.util - 58	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 58	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 70	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 70 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 66	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 49	:invoke	:write	[0 0]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:cas	[0 [2 1]]
+INFO  jepsen.util - 49	:fail	:write	[0 0]
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [0 1]}
+INFO  jepsen.util - 58	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 58	:ok	:cas	[0 [1 0]]
+INFO  jepsen.util - 66	:invoke	:cas	[0 [3 3]]
+INFO  jepsen.util - 75	:invoke	:write	[0 0]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:cas	[0 [3 3]]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 75 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [3 4]]
+INFO  jepsen.util - 62	:invoke	:cas	[0 [0 1]]
+INFO  jepsen.util - 62	:ok	:cas	[0 [0 1]]
+INFO  jepsen.util - 58	:invoke	:cas	[0 [3 4]]
+INFO  jepsen.util - 58	:ok	:cas	[0 [3 4]]
+INFO  jepsen.util - 80	:invoke	:cas	[0 [3 2]]
+INFO  jepsen.util - 66	:invoke	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:read	[0 nil]
+INFO  jepsen.util - 80	:ok	:cas	[0 [3 2]]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [3 2]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [3 2]]
+INFO  jepsen.util - 62	:invoke	:read	[0 nil]
+INFO  jepsen.util - 62	:ok	:read	{:test [3 2]}
+INFO  jepsen.util - 58	:invoke	:cas	[0 [0 1]]
+INFO  jepsen.util - 58	:ok	:cas	[0 [0 1]]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 80	:invoke	:cas	[0 [0 1]]
+INFO  jepsen.util - 66	:invoke	:cas	[0 [0 2]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [0 4]]
+INFO  jepsen.util - 80	:ok	:cas	[0 [0 1]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:cas	[0 [0 2]]
+INFO  jepsen.util - 62	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 62 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 58	:invoke	:write	[0 0]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 58 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 80	:invoke	:cas	[0 [3 0]]
+INFO  jepsen.util - 80	:ok	:cas	[0 [3 0]]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [3 3]]
+INFO  jepsen.util - 66	:invoke	:write	[0 4]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [3 3]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:write	[0 4]
+INFO  jepsen.util - 67	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 67 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 63	:invoke	:write	[0 4]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 63 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 80	:invoke	:read	[0 nil]
+INFO  jepsen.util - 80	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 49	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 66	:invoke	:write	[0 0]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [1 4]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:write	[0 0]
+INFO  jepsen.util - 72	:invoke	:cas	[0 [4 4]]
+INFO  jepsen.util - 72	:ok	:cas	[0 [4 4]]
+INFO  jepsen.util - 68	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 68	:ok	:cas	[0 [1 0]]
+INFO  jepsen.util - 80	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 80	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 66	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [0 1]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:cas	[0 [2 1]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [0 1]]
+INFO  jepsen.util - 72	:invoke	:read	[0 nil]
+INFO  jepsen.util - 72	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 68	:invoke	:read	[0 nil]
+INFO  jepsen.util - 68	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 80	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 66	:invoke	:read	[0 nil]
+INFO  jepsen.util - 80	:ok	:cas	[0 [1 0]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:read	[0 nil]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [0 3]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [0 3]]
+INFO  jepsen.util - 72	:invoke	:write	[0 1]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 72 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 68	:invoke	:read	[0 nil]
+INFO  jepsen.util - 68	:ok	:read	{:test [0 1]}
+INFO  jepsen.util - 80	:invoke	:cas	[0 [3 2]]
+INFO  jepsen.util - 49	:invoke	:read	[0 nil]
+INFO  jepsen.util - 66	:invoke	:cas	[0 [1 2]]
+INFO  jepsen.util - 80	:ok	:cas	[0 [3 2]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:read	[0 nil]
+INFO  jepsen.util - 66	:fail	:cas	[0 [1 2]]
+INFO  jepsen.util - 77	:invoke	:cas	[0 [3 1]]
+INFO  jepsen.util - 77	:ok	:cas	[0 [3 1]]
+INFO  jepsen.util - 68	:invoke	:cas	[0 [0 2]]
+INFO  jepsen.util - 68	:ok	:cas	[0 [0 2]]
+INFO  jepsen.util - 80	:invoke	:write	[0 2]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 80 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 66	:invoke	:read	[0 nil]
+INFO  jepsen.util - 49	:invoke	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:read	[0 nil]
+INFO  jepsen.util - 77	:invoke	:cas	[0 [2 0]]
+INFO  jepsen.util - 77	:ok	:cas	[0 [2 0]]
+INFO  jepsen.util - 68	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 68	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 85	:invoke	:read	[0 nil]
+INFO  jepsen.util - 66	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 85	:ok	:read	{:test [2 2]}
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:cas	[0 [2 1]]
+INFO  jepsen.util - 49	:invoke	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:read	[0 nil]
+INFO  jepsen.util - 77	:invoke	:cas	[0 [1 4]]
+INFO  jepsen.util - 77	:ok	:cas	[0 [1 4]]
+INFO  jepsen.util - 68	:invoke	:cas	[0 [2 2]]
+INFO  jepsen.util - 68	:ok	:cas	[0 [2 2]]
+INFO  jepsen.util - 85	:invoke	:read	[0 nil]
+INFO  jepsen.util - 85	:ok	:read	{:test [2 2]}
+INFO  jepsen.util - 66	:invoke	:read	[0 nil]
+INFO  jepsen.util - 49	:invoke	:write	[0 0]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:write	[0 0]
+INFO  jepsen.util - 77	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 77 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 68	:invoke	:read	[0 nil]
+INFO  jepsen.util - 68	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 85	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 85	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [3 0]]
+INFO  jepsen.util - 66	:invoke	:write	[0 2]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:write	[0 2]
+INFO  jepsen.util - 49	:fail	:cas	[0 [3 0]]
+INFO  jepsen.util - 82	:invoke	:read	[0 nil]
+INFO  jepsen.util - 82	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 68	:invoke	:read	[0 nil]
+INFO  jepsen.util - 68	:ok	:read	{:test [0 4]}
+INFO  jepsen.util - 85	:invoke	:write	[0 2]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 85 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 66	:invoke	:cas	[0 [1 0]]
+INFO  jepsen.util - 49	:invoke	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:read	[0 nil]
+INFO  jepsen.util - 66	:fail	:cas	[0 [1 0]]
+INFO  jepsen.util - 82	:invoke	:read	[0 nil]
+INFO  jepsen.util - 82	:ok	:read	{:test [0 2]}
+INFO  jepsen.util - 68	:invoke	:cas	[0 [4 2]]
+INFO  jepsen.util - 68	:ok	:cas	[0 [4 2]]
+INFO  jepsen.util - 90	:invoke	:cas	[0 [1 1]]
+INFO  jepsen.util - 90	:ok	:cas	[0 [1 1]]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [3 1]]
+INFO  jepsen.util - 66	:invoke	:cas	[0 [1 1]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [3 1]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:cas	[0 [1 1]]
+INFO  jepsen.util - 82	:invoke	:write	[0 0]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 82 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 68	:invoke	:read	[0 nil]
+INFO  jepsen.util - 68	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 90	:invoke	:read	[0 nil]
+INFO  jepsen.util - 90	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 66	:invoke	:write	[0 4]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [3 0]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:write	[0 4]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [3 0]]
+INFO  jepsen.util - 87	:invoke	:read	[0 nil]
+INFO  jepsen.util - 87	:ok	:read	{:test [0 0]}
+INFO  jepsen.util - 68	:invoke	:cas	[0 [0 0]]
+INFO  jepsen.util - 68	:ok	:cas	[0 [0 0]]
+INFO  jepsen.util - 66	:invoke	:cas	[0 [2 1]]
+INFO  jepsen.util - 90	:invoke	:cas	[0 [4 4]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:cas	[0 [2 1]]
+INFO  jepsen.util - 49	:invoke	:write	[0 4]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:write	[0 4]
+INFO  jepsen.util - 90	:ok	:cas	[0 [4 4]]
+INFO  jepsen.util - 87	:invoke	:cas	[0 [0 3]]
+INFO  jepsen.util - 87	:ok	:cas	[0 [0 3]]
+INFO  jepsen.util - 68	:invoke	:read	[0 nil]
+INFO  jepsen.util - 68	:ok	:read	{:test [0 3]}
+INFO  jepsen.util - 66	:invoke	:write	[0 3]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:write	[0 3]
+INFO  jepsen.util - 90	:invoke	:write	[0 3]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 90 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 49	:invoke	:cas	[0 [1 1]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [1 1]]
+INFO  jepsen.util - 87	:invoke	:cas	[0 [4 0]]
+INFO  jepsen.util - 87	:ok	:cas	[0 [4 0]]
+INFO  jepsen.util - 68	:invoke	:read	[0 nil]
+INFO  jepsen.util - 68	:ok	:read	{:test [4 0]}
+INFO  jepsen.util - 66	:invoke	:read	[0 nil]
+INFO  jepsen.util - 95	:invoke	:write	[0 0]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [4 3]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [4 3]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 95 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 87	:invoke	:cas	[0 [0 4]]
+INFO  jepsen.util - 68	:invoke	:write	[0 1]
+INFO  jepsen.util - 87	:ok	:cas	[0 [0 4]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 68 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.util - 100	:invoke	:write	[0 3]
+INFO  jepsen.util - 66	:invoke	:read	[0 nil]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [2 0]]
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 100 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform read: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform read: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform read: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 75]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [2 0]]
+INFO  jepsen.util - 87	:invoke	:cas	[0 [1 1]]
+INFO  jepsen.util - 73	:invoke	:cas	[0 [4 3]]
+INFO  jepsen.util - 87	:ok	:cas	[0 [1 1]]
+INFO  jepsen.util - 73	:ok	:cas	[0 [4 3]]
+INFO  jepsen.util - 66	:invoke	:write	[0 4]
+INFO  jepsen.util - 49	:invoke	:cas	[0 [0 1]]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:write	[0 4]
+INFO  jepsen.util - 105	:invoke	:read	[0 nil]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:cas	[0 [0 1]]
+INFO  jepsen.util - 105	:ok	:read	{:test [4 3]}
+INFO  jepsen.util - 73	:invoke	:cas	[0 [2 4]]
+INFO  jepsen.util - 87	:invoke	:cas	[0 [0 3]]
+INFO  jepsen.util - 87	:ok	:cas	[0 [0 3]]
+INFO  jepsen.core - Worker 2 done
+INFO  jepsen.util - 73	:ok	:cas	[0 [2 4]]
+INFO  jepsen.core - Worker 3 done
+INFO  jepsen.util - 49	:invoke	:write	[0 1]
+INFO  jepsen.util - 66	:invoke	:cas	[0 [0 1]]
+INFO  jepsen.util - 105	:invoke	:write	[0 4]
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 84]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 49	:fail	:write	[0 1]
+INFO  jepsen.core - Worker 4 done
+ERROR rethinkdb.net - #error {
+ :cause Cannot perform write: primary replica for shard ["", +inf) not available
+ :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message Cannot perform write: primary replica for shard ["", +inf) not available
+   :data {:t 18, :e 4100000, :r [Cannot perform write: primary replica for shard ["", +inf) not available], :b []}
+   :at [clojure.core$ex_info invoke core.clj 4593]}]
+ :trace
+ [[clojure.core$ex_info invoke core.clj 4593]
+  [rethinkdb.net$send_query invoke net.clj 123]
+  [rethinkdb.net$send_start_query invoke net.clj 129]
+  [rethinkdb.query$run invoke query.cljc 1006]
+  [jepson.cas.Client invoke_BANG_ cas.clj 94]
+  [jepsen.core$worker$fn__6707$fn__6708 invoke core.clj 137]
+  [jepsen.core$worker$fn__6707 invoke core.clj 135]
+  [clojure.core$binding_conveyor_fn$fn__4444 invoke core.clj 1916]
+  [clojure.lang.AFn call AFn.java 18]
+  [java.util.concurrent.FutureTask run FutureTask.java 266]
+  [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+  [java.lang.Thread run Thread.java 745]]}
+INFO  jepsen.util - 66	:fail	:cas	[0 [0 1]]
+INFO  jepsen.core - Worker 1 done
+INFO  jepsen.util - 		nil	nil
+WARN  jepsen.core - Process 105 indeterminate
+java.lang.AssertionError: Assert failed: (= (:process op) (:process completion))
+	at jepsen.core$worker$fn__6707$fn__6708.invoke(core.clj:142)
+	at jepsen.core$worker$fn__6707.invoke(core.clj:135)
+	at clojure.core$binding_conveyor_fn$fn__4444.invoke(core.clj:1916)
+	at clojure.lang.AFn.call(AFn.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+INFO  jepsen.core - Worker 0 done
+INFO  jepson.cas - Tearing down client
+INFO  jepson.cas - Tearing down client
+INFO  jepson.cas - Tearing down client
+INFO  jepson.cas - Tearing down client
+INFO  jepson.cas - Tearing down client
+INFO  jepsen.core - Run complete, writing
+INFO  jepsen.store - Wrote /myvolume/jepson.rethinkdb/store/rethnkdb2.2.0~0jessie/20151209T021914.000Z/results.edn
+INFO  jepsen.store - Wrote /myvolume/jepson.rethinkdb/store/rethnkdb2.2.0~0jessie/20151209T021914.000Z/history.txt
+INFO  jepsen.core - Analyzing
+INFO  jepsen.core - Analysis complete
+INFO  jepsen.store - Wrote /myvolume/jepson.rethinkdb/store/rethnkdb2.2.0~0jessie/20151209T021914.000Z/history.txt
+INFO  jepsen.store - Wrote /myvolume/jepson.rethinkdb/store/rethnkdb2.2.0~0jessie/20151209T021914.000Z/results.edn
+INFO  knossos.linear - :space 1 :cost 1.90E+1 :op {:type :ok, :f :read, :value {:test [0 0]}, :process 2, :time 5419263684, :index 9}
+INFO  jepsen.util - :nemesis	:info	:stop	nil
+INFO  jepsen.util - :nemesis	:info	:stop	"fully connected"
+INFO  jepsen.core - nemesis done
+INFO  jepson.rethinkdb - :n4 tearing down
+INFO  jepson.rethinkdb - :n2 tearing down
+INFO  jepson.rethinkdb - :n5 tearing down
+INFO  jepson.rethinkdb - :n3 tearing down
+INFO  jepson.rethinkdb - :n1 tearing down
+INFO  jepsen.core - Analysis invalid! (ﾉಥ益ಥ）ﾉ ┻━┻
+
+{:valid? false,
+ :error
+ "java.util.concurrent.ExecutionException: java.lang.ArrayIndexOutOfBoundsException: -1\n at java.util.concurrent.FutureTask.report (FutureTask.java:122)\n    java.util.concurrent.FutureTask.get (FutureTask.java:192)\n    clojure.core$deref_future.invoke (core.clj:2186)\n    clojure.core$future_call$reify__6736.deref (core.clj:6683)\n    clojure.core$deref.invoke (core.clj:2206)\n    clojure.core$map$fn__4553.invoke (core.clj:2624)\n    clojure.lang.LazySeq.sval (LazySeq.java:40)\n    clojure.lang.LazySeq.seq (LazySeq.java:56)\n    clojure.lang.RT.seq (RT.java:507)\n    clojure.core/seq (core.clj:137)\n    clojure.core.protocols$seq_reduce.invoke (protocols.clj:30)\n    clojure.core.protocols/fn (protocols.clj:101)\n    clojure.core.protocols$fn__6452$G__6447__6465.invoke (protocols.clj:13)\n    clojure.core$reduce.invoke (core.clj:6519)\n    clojure.core$into.invoke (core.clj:6600)\n    jepsen.checker$compose$reify__6582.check (checker.clj:249)\n    jepsen.checker$check_safe.invoke (checker.clj:38)\n    jepsen.core$run_BANG_$fn__6790.invoke (core.clj:417)\n    jepsen.core$run_BANG_.invoke (core.clj:367)\n    jepson.rethinkdb_test/fn (rethinkdb_test.clj:17)\n    clojure.test$test_var$fn__7670.invoke (test.clj:704)\n    clojure.test$test_var.invoke (test.clj:704)\n    clojure.test$test_vars$fn__7692$fn__7697.invoke (test.clj:722)\n    clojure.test$default_fixture.invoke (test.clj:674)\n    clojure.test$test_vars$fn__7692.invoke (test.clj:722)\n    clojure.test$default_fixture.invoke (test.clj:674)\n    clojure.test$test_vars.invoke (test.clj:718)\n    clojure.test$test_all_vars.invoke (test.clj:728)\n    clojure.test$test_ns.invoke (test.clj:747)\n    clojure.core$map$fn__4553.invoke (core.clj:2624)\n    clojure.lang.LazySeq.sval (LazySeq.java:40)\n    clojure.lang.LazySeq.seq (LazySeq.java:49)\n    clojure.lang.Cons.next (Cons.java:39)\n    clojure.lang.RT.boundedLength (RT.java:1735)\n    clojure.lang.RestFn.applyTo (RestFn.java:130)\n    clojure.core$apply.invoke (core.clj:632)\n    clojure.test$run_tests.doInvoke (test.clj:762)\n    clojure.lang.RestFn.applyTo (RestFn.java:137)\n    clojure.core$apply.invoke (core.clj:630)\n    user$eval85$fn__140$fn__171.invoke (form-init4055403635954906619.clj:1)\n    user$eval85$fn__140$fn__141.invoke (form-init4055403635954906619.clj:1)\n    user$eval85$fn__140.invoke (form-init4055403635954906619.clj:1)\n    user$eval85.invoke (form-init4055403635954906619.clj:1)\n    clojure.lang.Compiler.eval (Compiler.java:6782)\n    clojure.lang.Compiler.eval (Compiler.java:6772)\n    clojure.lang.Compiler.load (Compiler.java:7227)\n    clojure.lang.Compiler.loadFile (Compiler.java:7165)\n    clojure.main$load_script.invoke (main.clj:275)\n    clojure.main$init_opt.invoke (main.clj:280)\n    clojure.main$initialize.invoke (main.clj:308)\n    clojure.main$null_opt.invoke (main.clj:343)\n    clojure.main$main.doInvoke (main.clj:421)\n    clojure.lang.RestFn.invoke (RestFn.java:421)\n    clojure.lang.Var.invoke (Var.java:383)\n    clojure.lang.AFn.applyToHelper (AFn.java:156)\n    clojure.lang.Var.applyTo (Var.java:700)\n    clojure.main.main (main.java:37)\nCaused by: java.lang.ArrayIndexOutOfBoundsException: -1\n at clojure.lang.RT.aget (RT.java:2322)\n    knossos.model.memo.AWrapper.step (memo.clj:127)\n    knossos.linear$t_lin.invoke (linear.clj:34)\n    knossos.linear$step_ok_BANG_$final_linearization__6455.invoke (linear.clj:120)\n    knossos.util$rkeep$fn__2909$fn__2910.invoke (util.clj:29)\n    clojure.core.protocols$iter_reduce.invoke (protocols.clj:49)\n    clojure.core.protocols/fn (protocols.clj:112)\n    clojure.core.protocols$fn__6452$G__6447__6465.invoke (protocols.clj:13)\n    clojure.core.reducers$folder$reify__1159.coll_reduce (reducers.clj:126)\n    clojure.core$reduce.invoke (core.clj:6519)\n    knossos.linear$step_ok_BANG_.invoke (linear.clj:122)\n    knossos.linear$step.invoke (linear.clj:242)\n    clojure.core$partial$fn__4529.invoke (core.clj:2501)\n    clojure.lang.PersistentVector.reduce (PersistentVector.java:333)\n    clojure.core$reduce.invoke (core.clj:6518)\n    knossos.linear$analysis.invoke (linear.clj:312)\n    jepsen.checker$reify__6542.check (checker.clj:52)\n    jepsen.checker$compose$reify__6582$fn__6584.invoke (checker.clj:248)\n    clojure.core$pmap$fn__6744$fn__6745.invoke (core.clj:6729)\n    clojure.core$binding_conveyor_fn$fn__4444.invoke (core.clj:1916)\n    clojure.lang.AFn.call (AFn.java:18)\n    java.util.concurrent.FutureTask.run (FutureTask.java:266)\n    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1142)\n    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:617)\n    java.lang.Thread.run (Thread.java:745)\n"}
+
+
+java.util.concurrent.ExecutionException: java.lang.ArrayIndexOutOfBoundsException: -1
+ at java.util.concurrent.FutureTask.report (FutureTask.java:122)
+    java.util.concurrent.FutureTask.get (FutureTask.java:192)
+    clojure.core$deref_future.invoke (core.clj:2186)
+    clojure.core$future_call$reify__6736.deref (core.clj:6683)
+    clojure.core$deref.invoke (core.clj:2206)
+    clojure.core$map$fn__4553.invoke (core.clj:2624)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:56)
+    clojure.lang.RT.seq (RT.java:507)
+    clojure.core/seq (core.clj:137)
+    clojure.core.protocols$seq_reduce.invoke (protocols.clj:30)
+    clojure.core.protocols/fn (protocols.clj:101)
+    clojure.core.protocols$fn__6452$G__6447__6465.invoke (protocols.clj:13)
+    clojure.core$reduce.invoke (core.clj:6519)
+    clojure.core$into.invoke (core.clj:6600)
+    jepsen.checker$compose$reify__6582.check (checker.clj:249)
+    jepsen.checker$check_safe.invoke (checker.clj:38)
+    jepsen.core$run_BANG_$fn__6790.invoke (core.clj:417)
+    jepsen.core$run_BANG_.invoke (core.clj:367)
+    jepson.rethinkdb_test/fn (rethinkdb_test.clj:17)
+    clojure.test$test_var$fn__7670.invoke (test.clj:704)
+    clojure.test$test_var.invoke (test.clj:704)
+    clojure.test$test_vars$fn__7692$fn__7697.invoke (test.clj:722)
+    clojure.test$default_fixture.invoke (test.clj:674)
+    clojure.test$test_vars$fn__7692.invoke (test.clj:722)
+    clojure.test$default_fixture.invoke (test.clj:674)
+    clojure.test$test_vars.invoke (test.clj:718)
+    clojure.test$test_all_vars.invoke (test.clj:728)
+    clojure.test$test_ns.invoke (test.clj:747)
+    clojure.core$map$fn__4553.invoke (core.clj:2624)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.boundedLength (RT.java:1735)
+    clojure.lang.RestFn.applyTo (RestFn.java:130)
+    clojure.core$apply.invoke (core.clj:632)
+    clojure.test$run_tests.doInvoke (test.clj:762)
+    clojure.lang.RestFn.applyTo (RestFn.java:137)
+    clojure.core$apply.invoke (core.clj:630)
+    user$eval85$fn__140$fn__171.invoke (form-init4055403635954906619.clj:1)
+    user$eval85$fn__140$fn__141.invoke (form-init4055403635954906619.clj:1)
+    user$eval85$fn__140.invoke (form-init4055403635954906619.clj:1)
+    user$eval85.invoke (form-init4055403635954906619.clj:1)
+    clojure.lang.Compiler.eval (Compiler.java:6782)
+    clojure.lang.Compiler.eval (Compiler.java:6772)
+    clojure.lang.Compiler.load (Compiler.java:7227)
+    clojure.lang.Compiler.loadFile (Compiler.java:7165)
+    clojure.main$load_script.invoke (main.clj:275)
+    clojure.main$init_opt.invoke (main.clj:280)
+    clojure.main$initialize.invoke (main.clj:308)
+    clojure.main$null_opt.invoke (main.clj:343)
+    clojure.main$main.doInvoke (main.clj:421)
+    clojure.lang.RestFn.invoke (RestFn.java:421)
+    clojure.lang.Var.invoke (Var.java:383)
+    clojure.lang.AFn.applyToHelper (AFn.java:156)
+    clojure.lang.Var.applyTo (Var.java:700)
+    clojure.main.main (main.java:37)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: -1
+ at clojure.lang.RT.aget (RT.java:2322)
+    knossos.model.memo.AWrapper.step (memo.clj:127)
+    knossos.linear$t_lin.invoke (linear.clj:34)
+    knossos.linear$step_ok_BANG_$final_linearization__6455.invoke (linear.clj:120)
+    knossos.util$rkeep$fn__2909$fn__2910.invoke (util.clj:29)
+    clojure.core.protocols$iter_reduce.invoke (protocols.clj:49)
+    clojure.core.protocols/fn (protocols.clj:112)
+    clojure.core.protocols$fn__6452$G__6447__6465.invoke (protocols.clj:13)
+    clojure.core.reducers$folder$reify__1159.coll_reduce (reducers.clj:126)
+    clojure.core$reduce.invoke (core.clj:6519)
+    knossos.linear$step_ok_BANG_.invoke (linear.clj:122)
+    knossos.linear$step.invoke (linear.clj:242)
+    clojure.core$partial$fn__4529.invoke (core.clj:2501)
+    clojure.lang.PersistentVector.reduce (PersistentVector.java:333)
+    clojure.core$reduce.invoke (core.clj:6518)
+    knossos.linear$analysis.invoke (linear.clj:312)
+    jepsen.checker$reify__6542.check (checker.clj:52)
+    jepsen.checker$compose$reify__6582$fn__6584.invoke (checker.clj:248)
+    clojure.core$pmap$fn__6744$fn__6745.invoke (core.clj:6729)
+    clojure.core$binding_conveyor_fn$fn__4444.invoke (core.clj:1916)
+    clojure.lang.AFn.call (AFn.java:18)
+    java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1142)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:617)
+    java.lang.Thread.run (Thread.java:745)
+
+
+lein test :only jepson.rethinkdb-test/better-test
+
+FAIL in (better-test) (rethinkdb_test.clj:15)
+expected: (:valid? (:results (run! (cas/cas-test version "single" "single"))))
+  actual: false
+
+Ran 1 tests containing 1 assertions.
+1 failures, 0 errors.

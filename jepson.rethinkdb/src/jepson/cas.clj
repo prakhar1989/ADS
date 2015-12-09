@@ -6,6 +6,7 @@
             [jepsen.os.debian :as debian]
             [jepsen.tests :as tests]
             [jepsen.model :as model]
+            [jepsen.independent :as independent]
             [jepsen.checker :as checker]
             [jepsen.nemesis :as nemesis]
             [jepsen.client :as client]
@@ -18,13 +19,15 @@
   "Updates the write-acks mode for a cluster. Spins until successful."
   [conn test write-mode]
   (rethinkdb/retry 5
-         (query/run
-           (query/update
-             (query/table (query/db "rethinkdb") "table_config")
-             {:write_acks write-mode
-              :shards [{:primary_replica (core/primary test)
-                        :replicas (map name (:nodes test))}]})
-           conn)))
+        (let [primary (first (:nodes test))]
+          (prn (str "primary replica:" primary))
+          (query/run
+             (query/update
+               (query/table (query/db "rethinkdb") "table_config")
+               {:write_acks write-mode
+                :shards [{:primary_replica primary
+                          :replicas (map name (:nodes test))}]})
+             conn))))
 
 ; wraps a operation's error in either a :fail or :info state
 ; depending on whether the operation 
@@ -66,32 +69,39 @@
   (invoke! [this test op]
     ; Reads are idempotent, we can treat their failure as info
     (with-errors op #{:read}
+      (let [id (key (:value op))
+            value (val (:value op))
+            row (query/get (term :TABLE [(query/db db) table]
+                            {:read_mode read-mode}) id)]
       (case (:f op)
-            :read (let [result (-> (query/db db)
-                                   (query/table table)
-                                   (query/get "test")
+            ;; a read invoked by the client
+            :read (let [result (-> (query/get row "test")
                                    (query/get-field "value")
                                    (query/run (:conn this)))]
-                        (assoc op
-                          :value {:test result}
-                          :type :ok))
+                        (assoc op 
+                           :value (independent/tuple id result)
+                           :type :ok))
 
+            ;; a write invoked by the client
             :write ((-> (query/db db)
                         (query/table table)
-                        (query/insert {:id "test" :value (:value op)}
-                                      {"conflict" "update"})
+                        (query/insert {:id id :value value} {"conflict" "update"})
                         (query/run (:conn this)))
                      (assoc op :type :ok))
 
-            :cas (let [row (-> (query/db db)
-                                (query/table table)
-                                (query/get "test"))]
-                      (-> (query/update row 
-                                      (query/fn [row]
-                                            (if (query/eq (query/get-field row :value) (first (:value op)))
-                                                {:value (last (:value op))})))
-                          (query/run (:conn this)))
-                   (assoc op :type :ok)))))
+            ;; compare-and-set operations
+            :cas (let [[old-val new-val] value
+                       result (-> (query/update row 
+                                    (query/fn [row]
+                                      (query/branch 
+                                        (query/eq (query/get-field row "value") old-val)
+                                          {:value new-val}
+                                          (query/error "abort"))))
+                                  (query/run (:conn this)))]
+                   (assoc op :type (if (and (= (:errors result) 0)
+                                            (= (:replaced result) 1))
+                                     :ok
+                                     :fail)))))))
 
   (teardown! [this test]
     (query/run (query/db-drop db) (:conn this))
@@ -113,18 +123,21 @@
   [gen]
   (gen/phases
     (->> gen
-         (gen/delay 1)
+         ;(gen/delay 1)
          (gen/nemesis
-           (gen/seq (cycle [(gen/sleep 60)
+           (gen/seq (cycle [{:type :info :f :start}
+                            (gen/sleep 30)
                             {:type :info :f :stop}
-                            {:type :info :f :start}])))
-         (gen/time-limit 6))))
+                            (gen/sleep 0)])))
+         (gen/time-limit 100))))
 
 ; The skeleton is fixed used by aphyr at various places. Only the client is to be implemented for our use case.
-(defn cas-test [version write-mode read-mode]
+(defn cas-test 
   "Test to perform"
+  [version write-mode read-mode]
   (merge tests/noop-test
          {:name       (str "rethnkdb" version)
+          :version    version
           :os         debian/os
           :db         (rethinkdb/db version)
           :client     (create-client write-mode read-mode)
@@ -132,4 +145,9 @@
           :checker    (checker/compose {:linear checker/linearizable
                                         :latency (checker/latency-graph)})
           :nemesis    (nemesis/partition-random-halves)
-          :generator  (std-gen (gen/mix [r w cas]))}))
+          ;:generator  (std-gen (gen/mix [r w cas]))}))
+          ;:concurrency 10
+          :generator (std-gen (independent/sequential-generator (range)
+                                (fn [k] (->> (gen/mix [r r w cas cas])
+                                             (gen/stagger 0.05)
+                                             (gen/limit 4000))))) }))

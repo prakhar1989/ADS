@@ -9,8 +9,6 @@
                     [util :refer [timeout meh]]]
             [jepsen.os.debian :as debian]))
 
-
-
 (defn connection
   "Make a connection to rethinkdb node"
   [node]
@@ -79,11 +77,4 @@
           (show-dbinfo node)))
 
     (teardown! [_ test node]
-      ;; TODO: See how to kill
       (info node "tearing down"))))
-
-
-(defn basic-test [version]
-  (merge tests/noop-test
-         {:os debian/os
-          :db (db version)}))
