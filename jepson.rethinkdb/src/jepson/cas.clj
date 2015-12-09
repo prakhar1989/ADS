@@ -47,7 +47,7 @@
   ;TODO:: Not sure what term is for. Documentation doesn't say anything
   (query/run (term :WAIT [(query/table (query/db db) tbl)] {}) conn))
 
-(defrecord Client [tbl-created? db table write-mode read-mode]
+(defrecord Client [tbl-created? db table write-mode read_mode]
   client/Client
   (setup! [this test node]
     (let [conn (rethinkdb/connection node)]
@@ -67,39 +67,35 @@
 
   ;TODO::Figure out id at all places. Cant undestand what aphyr has done.
   (invoke! [this test op]
-    ; Reads are idempotent, we can treat their failure as info
-    (with-errors op #{:read}
-      (let [id (key (:value op))
-            value (val (:value op))
-            row (query/get (term :TABLE [(query/db db) table]
-                            {:read_mode read-mode}) id)]
-      (case (:f op)
-            ;; a read invoked by the client
-            :read (let [result (-> (query/get row "test")
-                                   (query/get-field "value")
-                                   (query/run (:conn this)))]
-                        (assoc op 
-                           :value (independent/tuple id result)
-                           :type :ok))
-
-            ;; a write invoked by the client
-            :write ((-> (query/db db)
-                        (query/table table)
-                        (query/insert {:id id :value value} {"conflict" "update"})
-                        (query/run (:conn this)))
-                     (assoc op :type :ok))
-
-            ;; compare-and-set operations
-            :cas (let [[old-val new-val] value
-                       result (-> (query/update row 
-                                    (query/fn [row]
-                                      (query/branch 
-                                        (query/eq (query/get-field row "value") old-val)
-                                          {:value new-val}
-                                          (query/error "abort"))))
-                                  (query/run (:conn this)))]
-                   (assoc op :type (if (and (= (:errors result) 0)
-                                            (= (:replaced result) 1))
+      (with-errors op #{:read}
+        (let [id    (key (:value op))
+              value (val (:value op))
+              row (query/get (term :TABLE [(query/db db) table]
+                             {:read_mode read_mode}) id)]
+          (case (:f op)
+            :read (assoc op
+                         :type  :ok
+                         :value (independent/tuple id
+                                  (query/run (term :DEFAULT
+                                               [(query/get-field row "val") nil])
+                                         (:conn this))))
+            :write (do (query/run (query/insert (query/table (query/db db) table)
+                                        {:id id, :val value}
+                                        {"conflict" "update"})
+                              (:conn this))
+                       (assoc op :type :ok))
+            :cas (let [[value value'] value
+                       res (query/run
+                             (query/update
+                               row
+                               (query/fn [row]
+                                 (query/branch
+                                   (query/eq (query/get-field row "val") value)
+                                   {:val value'}
+                                   (query/error "abort"))))
+                             (:conn this))]
+                   (assoc op :type (if (and (= (:errors res) 0)
+                                            (= (:replaced res) 1))
                                      :ok
                                      :fail)))))))
 
@@ -150,4 +146,4 @@
           :generator (std-gen (independent/sequential-generator (range)
                                 (fn [k] (->> (gen/mix [r r w cas cas])
                                              (gen/stagger 0.05)
-                                             (gen/limit 4000))))) }))
+                                             (gen/limit 200))))) }))
