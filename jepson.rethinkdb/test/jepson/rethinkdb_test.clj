@@ -1,7 +1,6 @@
 (ns jepson.rethinkdb-test
   (:require [clojure.test :refer :all]
-            [jepsen.core :refer [run!]]
-            [jepson.rethinkdb :as rethinkdb]
+            [jepsen.core :as jepsen]
             [jepson.cas :as cas]))
 
 (def version "2.2.0~0jessie")
@@ -14,4 +13,4 @@
 (deftest better-test
     (is (:valid?
           (:results
-            (run! (cas/cas-test version "single" "single"))))))
+            (jepsen/run! (cas/cas-test version "majority" "majority"))))))

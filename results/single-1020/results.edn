@@ -1,0 +1,61 @@
+{:linear
+ {:valid? false,
+  :configs
+  ({:model {:value nil},
+    :pending
+    [{:type :invoke,
+      :f :read,
+      :value [0 nil],
+      :process 0,
+      :time 4209626893,
+      :index 1}
+     {:type :invoke,
+      :f :read,
+      :value [0 nil],
+      :process 1,
+      :time 4244663658,
+      :index 3}
+     {:type :invoke,
+      :f :read,
+      :value [0 nil],
+      :process 2,
+      :time 4202078101,
+      :index 2}]}),
+  :final-paths
+  #{[{:op nil, :model {:value nil}}
+     {:op
+      {:type :invoke,
+       :f :read,
+       :value [0 nil],
+       :process 2,
+       :time 4202078101,
+       :index 2},
+      :model {:msg "can't read [0 nil] from register "}}]
+    [{:op nil, :model {:value nil}}
+     {:op
+      {:type :ok,
+       :f :read,
+       :value [0 nil],
+       :process 1,
+       :time 4287519256,
+       :index 6},
+      :model {:msg "can't read [0 nil] from register "}}]
+    [{:op nil, :model {:value nil}}
+     {:op
+      {:type :invoke,
+       :f :read,
+       :value [0 nil],
+       :process 0,
+       :time 4209626893,
+       :index 1},
+      :model {:msg "can't read [0 nil] from register "}}]},
+  :previous-ok nil,
+  :op
+  {:type :ok,
+   :f :read,
+   :value [0 nil],
+   :process 1,
+   :time 4287519256,
+   :index 6}},
+ :latency {:valid? true},
+ :valid? false}

@@ -1,6 +1,6 @@
-cd aphyr-jepsen/clj-rethinkdb
+cd clj-rethinkdb
 lein install
 cd ../knossos
 lein install
-cd ../jepsen
+cd ../aphyr-jepsen/jepsen
 lein install

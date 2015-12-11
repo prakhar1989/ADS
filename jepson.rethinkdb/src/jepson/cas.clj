@@ -122,10 +122,10 @@
          ;(gen/delay 1)
          (gen/nemesis
            (gen/seq (cycle [{:type :info :f :start}
-                            (gen/sleep 30)
+                            (gen/sleep 40)
                             {:type :info :f :stop}
-                            (gen/sleep 0)])))
-         (gen/time-limit 100))))
+                            (gen/sleep 40)])))
+         (gen/time-limit 20))))
 
 ; The skeleton is fixed used by aphyr at various places. Only the client is to be implemented for our use case.
 (defn cas-test 
@@ -146,4 +146,4 @@
           :generator (std-gen (independent/sequential-generator (range)
                                 (fn [k] (->> (gen/mix [r r w cas cas])
                                              (gen/stagger 0.05)
-                                             (gen/limit 200))))) }))
+                                             (gen/limit 10)))))}))
